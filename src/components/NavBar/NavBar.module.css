@@ -1,0 +1,48 @@
+.nav {
+    height: 54px;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 0 8%;
+}
+
+.nav__inputWrapper {
+    margin: auto auto;
+    width: 30%;
+}
+
+.nav__inputDecoration {
+    border: 2px solid #004583;
+    width: 330px;
+    height: 35px;
+    border-radius: 47px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__item {
+    margin: auto auto;
+    letter-spacing: -0.5px;
+}
+
+.nav__input {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 25px;
+}
+
+.nav__input::placeholder {
+    color: #004583;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav__item_redText {
+    color: #BB2822;
+    font-weight: 700;
+}
