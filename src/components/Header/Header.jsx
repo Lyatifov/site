@@ -1,4 +1,7 @@
 import logo from "../../img/logo.png"
+import icon_1 from "../../img/icon/header/icon_1.png"
+import icon_2 from "../../img/icon/header/icon_2.png"
+import icon_3 from "../../img/icon/header/icon_3.png"
 import cl from "./Header.module.css"
 
 export default function Header() {
@@ -7,8 +10,8 @@ export default function Header() {
         <header className={cl.header}>
             <div className={cl.header__information}>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_spaceAround}>
-                    <div>&#8987;</div>
-                    <div>&#129517;</div>
+                    <div><img src={icon_1} alt="&#955;" /></div>
+                    <div><img src={icon_2} alt="&#955;" /></div>
                 </div>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textLeft}>
                     <div>
@@ -29,8 +32,8 @@ export default function Header() {
                     <div>Звонки по России:</div>
                 </div>
                 <div className={cl.header__informationItem}>
-                    <div>&#9990;</div>
-                    <div>&#9990;</div>
+                    <div><img src={icon_3} alt="&#955;" /></div>
+                    <div><img src={icon_3} alt="&#955;" /></div>
                 </div>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textLeft}>
                     <div>

@@ -1,0 +1,97 @@
+.presentation {
+    margin-top: 5px;
+    background-image: url("../../../img/presentation.png");
+    height: 460px;
+    box-sizing: border-box;
+    padding: 5% 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+.presentation__presentationWrapper {
+    width: 457px;
+}
+
+.presentation__presentationWrapper>div {
+    margin: 15px 0;
+}
+
+.presentation__email {
+    text-decoration: underline;
+}
+
+.presentation__presentationText_700 {
+    font-weight: 700;
+}
+
+
+.presentation__icon {
+    background-color: white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation__dignity {
+    display: flex;
+}
+
+.presentation__dignityWrapper {
+    display: flex;
+}
+
+.presentation__textDignity {
+    box-sizing: border-box;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 15px;
+
+    max-width: 280px;
+
+    display: flex;
+}
+
+.presentation__dignityTitle {
+    width: 450px;
+    height: 96px;
+    left: 259px;
+    top: 239px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.presentation_700 {
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.presentation_600 {
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.presentation_200 {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+
+
+.presentation__textDetail {
+    padding-bottom: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    margin: auto 0 0 5px;
+}

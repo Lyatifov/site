@@ -1,4 +1,5 @@
 import cl from "./NavBar.module.css"
+import icon from "../../img/icon/nav/icon.png"
 
 export default function NavBar() {
 
@@ -15,7 +16,7 @@ export default function NavBar() {
                 <div className={cl.nav__inputDecoration}>
                     <input className={cl.nav__input} type="text" placeholder="Поиск по сайту..." />
                     <div>
-                        &#128269;
+                        <img src={icon} alt="&#955;" />
                     </div>
                 </div>
             </div>

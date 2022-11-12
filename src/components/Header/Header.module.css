@@ -41,6 +41,8 @@
 
 .header__informationItem_spaceAround {
     justify-content: space-around;
+    padding-top: 21px;
+    padding-bottom: 5px;
 }
 
 .header__textRed {

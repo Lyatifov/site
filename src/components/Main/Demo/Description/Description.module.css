@@ -1,0 +1,94 @@
+.description {
+    max-width: 720px;
+    max-height: 320px;
+    display: flex;
+
+}
+
+.description_reverse {
+    flex-direction: row-reverse;
+}
+
+.description__img {
+    max-width: 100%;
+    min-width: 250px;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    min-height: 220px;
+    object-fit: cover;
+    display: block;
+    height: calc(100vh - 22px);
+}
+
+
+.description__item {
+    max-width: 360px;
+    min-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    resize: horizontal;
+}
+
+.description__text {
+    box-sizing: border-box;
+    width: 91.9%;
+    padding: 4%;
+    text-align: left;
+
+}
+
+.description_700 {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 7px;
+}
+
+.description_400 {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.description__button {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #004583;
+    font-size: 30px;
+}
+
+.description__button>img {
+    margin: 17px;
+}
+
+.description__pointer {
+    position: absolute;
+    right: -1px;
+    bottom: 220px;
+    border: 30px solid transparent;
+    border-right: 30px solid white;
+    z-index: 10;
+}
+
+.description__pointer_reverse {
+    position: absolute;
+    left: -1px;
+    bottom: 220px;
+    border: 30px solid transparent;
+    border-left: 30px solid white;
+    z-index: 10;
+}
+
+.description_blue {
+    color: #0a5596;
+}
+
+.description__button_reverse {
+    transform: rotate(180deg);
+    margin-left: auto;
+}
