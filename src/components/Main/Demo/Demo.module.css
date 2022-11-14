@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+
+@media (max-width: 799px) {
+    .demo {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}

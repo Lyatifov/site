@@ -1,0 +1,50 @@
+.hat__burgerButton {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+}
+
+.hat {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #F3F3F3;
+    width: 100%;
+    height: 62px;
+    min-width: 300px;
+    max-width: 799px;
+}
+
+.hat__text {
+    position: absolute;
+    top: 28%;
+    left: 3%;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+}
+
+.hat__text>div {
+    padding-left: 5px;
+    margin: auto auto;
+}
+
+.hat__logo>img {
+    width: 93px;
+    height: 46px;
+    margin: 6px auto;
+}
+
+@media (min-width:800px) {
+    .hat {
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@media (max-width:799px) {
+    .hat__burgerButton {
+        cursor: pointer;
+    }
+}

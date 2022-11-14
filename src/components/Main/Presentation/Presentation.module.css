@@ -1,20 +1,24 @@
 .presentation {
-    margin-top: 5px;
     background-image: url("../../../img/presentation.png");
     height: 460px;
     box-sizing: border-box;
     padding: 5% 15%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: white;
     text-align: left;
     letter-spacing: -0.5px;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
+
+
+
 .presentation__presentationWrapper {
-    width: 457px;
+    max-width: 457px;
+    width: auto;
 }
 
 .presentation__presentationWrapper>div {
@@ -61,7 +65,8 @@
 }
 
 .presentation__dignityTitle {
-    width: 450px;
+    max-width: 450px;
+    width: auto;
     height: 96px;
     left: 259px;
     top: 239px;
@@ -87,11 +92,103 @@
     font-size: 12px;
 }
 
-
-
 .presentation__textDetail {
     padding-bottom: 2px;
     font-weight: 400;
     font-size: 12px;
     margin: auto 0 0 5px;
+}
+
+@media (max-width: 799px) {
+    .presentation {
+        background-position: -360px 0;
+        padding: 38px 10px;
+        height: 318px;
+        justify-content: space-around;
+        background-size: cover;
+    }
+
+    .presentation__presentationWrapper {
+        max-width: 297px;
+        width: auto;
+        height: 75px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .presentation__dignityWrapper {
+        flex-wrap: wrap;
+    }
+
+    .presentation__dignityWrapper>div {
+        margin-top: 10px;
+    }
+
+    .presentation__presentationWrapper>div {
+        margin: 10px 0;
+    }
+
+    /* .presentation__email {
+        text-decoration: underline;
+    } */
+
+    .presentation__presentationText_700 {
+        font-weight: 700;
+    }
+
+    .presentation__icon {
+        background-color: white;
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .presentation__icon>img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .presentation__textDignity {
+        box-sizing: border-box;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 15px;
+        max-width: 280px;
+        display: flex;
+    }
+
+    .presentation__dignityTitle {
+        
+        width: 230px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .presentation_700 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .presentation_600 {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .presentation_200 {
+        font-size: 7px;
+        line-height: 9px;
+        max-width: 180px;
+    }
+
+    .presentation__textDetail {
+        padding-bottom: 2px;
+        font-weight: 400;
+        font-size: 10px;
+        margin: auto 0 2px 3px;
+    }
 }

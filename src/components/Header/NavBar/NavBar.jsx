@@ -1,5 +1,5 @@
 import cl from "./NavBar.module.css"
-import icon from "../../img/icon/nav/icon.png"
+import icon from "../../../img/icon/nav/icon.png"
 
 export default function NavBar() {
 

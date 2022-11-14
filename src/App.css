@@ -4,13 +4,27 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  outline: none;
 }
 
 .App {
   text-align: center;
-  max-width: 1440px;
-  min-width: 1000px;
-  margin: 0 auto;
   font-family: 'Inter', sans-serif;
   letter-spacing: -0.5px;
+}
+
+@media (min-width:800px) {
+  .App {
+    max-width: 1440px;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:799px) {
+  .App {
+    max-width: 799px;
+    min-width: 320px;
+    width: auto;
+  }
 }
