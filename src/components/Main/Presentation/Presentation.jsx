@@ -8,6 +8,7 @@ export default function Presentation() {
 
     const dignityList = [
         {
+            id: 1,
             icon: img_1,
             text1: '>100 000',
             text1_detail: 'м²',
@@ -15,6 +16,7 @@ export default function Presentation() {
         },
 
         {
+            id: 2,
             icon: img_2,
             text1: '>1 100',
             text1_detail: 'чел',
@@ -22,6 +24,7 @@ export default function Presentation() {
         },
 
         {
+            id: 3,
             icon: img_3,
             text1: 'Официально',
             text1_detail: null,
@@ -52,7 +55,7 @@ export default function Presentation() {
 
                 {
                     dignityList.map(item =>
-                        <Dignity item={item} />
+                        <Dignity key={item.id} item={item} />
                     )
                 }
             </div>

@@ -1,0 +1,36 @@
+.nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.nav__column {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 10px 15%;
+    width: auto;
+}
+
+.nav__firstLine {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+@media (max-width: 1099px) {
+    .nav {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 799px) {
+    .nav {
+        grid-template-columns: auto auto;
+        font-size: 13px;
+        line-height: 28px;
+    }
+}

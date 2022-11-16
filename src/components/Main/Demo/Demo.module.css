@@ -9,3 +9,13 @@
         grid-template-columns: auto;
     }
 }
+
+.demo__title {
+    border-top: 2px solid #EFEFEF;
+    border-bottom: 2px solid #EFEFEF;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 15px;
+    text-transform: uppercase;
+}

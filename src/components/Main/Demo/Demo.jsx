@@ -1,49 +1,12 @@
 import Description from './Description/Description'
-import img from "../../../img/demo.png"
 import imgOtherInformation from "../../../img/other.png"
 import cl from './Demo.module.css'
 
-export default function Demo() {
 
-    const arr = [
-        {
-            title: 'Гостиные',
-            description: 'Мини текст описания и преимущества покупки данного направления.',
-            availability: '20',
-            price: '42.000',
-            img: img
-        },
-        {
-            title: 'Спальни',
-            description: 'Мини текст описания и преимущества покупки данного направления.',
-            availability: '30',
-            price: '60.000',
-            img: img
-        },
-        {
-            title: 'Детские',
-            description: 'Мини текст описания и преимущества покупки данного направления.',
-            availability: '14',
-            price: '12.000',
-            img: img
-        },
-        // {
-        //     title: 'Прихожие',
-        //     description: 'Мини текст описания и преимущества покупки данного направления.',
-        //     availability: '70',
-        //     price: '52.000',
-        //     img: img
-        // },
-        // {
-        //     title: 'Кровати',
-        //     description: 'Мини текст описания и преимущества покупки данного направления.',
-        //     availability: '10',
-        //     price: '123.000',
-        //     img: img
-        // }
-    ]
+export default function Demo({ isModileVersion, data, title }) {
 
     const evenItem = {
+        id: Date().getUTCMilliseconds,
         title: 'Прочяя информация',
         description: '',
         availability: '',
@@ -51,26 +14,43 @@ export default function Demo() {
         img: imgOtherInformation,
     }
 
-
     return (
-        <section className={cl.demo}>
-
-            {arr.map((item, index) => {
-                if ((index + 1) % 3 === 0 || (index + 1) % 4 === 0) {
-                    return <Description item={item} reverse={true} />
-                }
-                return <Description item={item} />
-            }
-            )}
+        <section>
 
             {
-                arr.length % 2 ?
-                    !(arr.length % 3) || !(arr.length % 4) ?
-                        <Description item={evenItem} even={true} reverse={true} />
-                        :
-                        <Description item={evenItem} even={true} />
+                title ?
+                    <div className={cl.demo__title}>{title}</div>
                     : <div></div>
             }
+
+            <div className={cl.demo}>
+                {data.map((item, index) => {
+                    if (isModileVersion) {
+                        if ((index + 1) % 2 === 0) {
+                            return <Description key={item.id} item={item} reverse={true} />
+                        }
+                        return <Description key={item.id} item={item} />
+                    } else {
+                        if ((index + 1) % 3 === 0 || (index + 1) % 4 === 0) {
+                            return <Description key={item.id} item={item} reverse={true} />
+                        }
+                        return <Description key={item.id} item={item} />
+                    }
+
+                }
+                )}
+
+                {
+                    data.length % 2 && !isModileVersion ?
+                        !(data.length % 3) || !(data.length % 4) ?
+                            <Description key={evenItem.id} item={evenItem} reverse={true} />
+                            :
+                            <Description key={evenItem.id} item={evenItem} />
+                        : <div></div>
+                }
+            </div>
+
+
 
 
         </section>

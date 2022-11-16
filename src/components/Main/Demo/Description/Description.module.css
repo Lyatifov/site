@@ -18,7 +18,8 @@
     min-height: 220px;
     object-fit: cover;
     display: block;
-    height: calc(100vh - 22px);
+    height: 100%;
+    overflow: hidden;
 }
 
 
@@ -69,19 +70,19 @@
 .description__pointer {
     position: absolute;
     right: -1px;
-    bottom: 220px;
+    bottom: 65%;
     border: 30px solid transparent;
     border-right: 30px solid white;
-    z-index: 10;
+    z-index: 2;
 }
 
 .description__pointer_reverse {
     position: absolute;
     left: -1px;
-    bottom: 220px;
+    bottom: 65%;
     border: 30px solid transparent;
     border-left: 30px solid white;
-    z-index: 10;
+    z-index: 2;
 }
 
 .description_blue {
@@ -99,86 +100,70 @@
         max-height: 320px;
         display: flex;
         width: auto;
+        justify-content: center;
     }
-    
+
     .description_reverse {
         flex-direction: row-reverse;
     }
-    
+
     .description__img {
         max-width: 100%;
-        min-width: 250px;
+        min-width: 160px;
         width: 100%;
         background-size: contain;
         height: auto;
-        max-height: 320px;
-        min-height: 220px;
+        max-height: 330px;
+        min-height: 150px;
         object-fit: cover;
         display: block;
-        height: calc(100vh - 22px);
+        height: 100%;
     }
-    
-    
+
+
     .description__item {
-        max-width: 359.5px;
+        max-width: 399.5px;
         min-width: 160px;
         width: 100%;
         height: auto;
-        display: block;
-        position: relative;
-        resize: horizontal;
+        flex: 1 1 50%;
     }
-    
-    .description__text {
-        box-sizing: border-box;
-        width: 91.9%;
-        padding: 4%;
-        text-align: left;
-    }
-    
-    .description_700 {
-        font-weight: 700;
-        font-size: 24px;
-        margin-top: 25px;
-        margin-bottom: 7px;
-    }
-    
-    .description_400 {
-        font-weight: 400;
-        font-size: 16px;
-        margin-bottom: 18px;
-    }
-    
+
     .description__button {
-        border-radius: 50px;
         width: 25px;
         height: 25px;
-        border: 1px solid #004583;
         font-size: 20px;
     }
-    
+
     .description__button>img {
         width: 7px;
         height: 7px;
-        margin: 8.4px;
+        margin: 9.5px;
     }
-    
-    /* .description__pointer {
-        position: absolute;
-        right: -1px;
-        bottom: 220px;
-        border: 30px solid transparent;
-        border-right: 30px solid white;
-        z-index: 10;
+
+    .description__pointer {
+        bottom: 65%;
+        border: 20px solid transparent;
+        border-right: 20px solid white;
     }
-    
+
     .description__pointer_reverse {
-        position: absolute;
-        left: -1px;
-        bottom: 220px;
-        border: 30px solid transparent;
-        border-left: 30px solid white;
-        z-index: 10;
-    } */
-    
+        bottom: 65%;
+        border: 20px solid transparent;
+        border-left: 20px solid white;
+    }
+}
+
+@media (max-width:499px) {
+    .description_700 {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .description_400 {
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 13px;
+    }
 }

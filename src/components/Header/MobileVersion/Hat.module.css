@@ -12,6 +12,7 @@
     height: 62px;
     min-width: 300px;
     max-width: 799px;
+    z-index: 3;
 }
 
 .hat__text {

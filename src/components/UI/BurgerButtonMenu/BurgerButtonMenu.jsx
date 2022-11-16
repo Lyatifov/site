@@ -8,8 +8,6 @@ export default function BurgerButtonMenu({ className }) {
 
     const dispatch = useDispatch()
     const isActive = useSelector(state => state.states.isActiveMiniMenu)
-    console.log(isActive);
-
 
     function Active() {
         dispatch(toggleIsActiveMiniMenu())

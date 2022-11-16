@@ -1,0 +1,50 @@
+.footer {
+    height: 151px;
+    width: 100%;
+}
+
+.footer__hat {
+    position: relative;
+}
+
+.footer__nameCo {
+    position: absolute;
+    left: 24px;
+    top: 57px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: #BEBEBE;
+}
+
+.footer__logo {
+    padding-top: 30px;
+}
+
+.footer__logo>img {
+    width: 173px;
+    height: 86px;
+}
+
+@media (max-width: 799px) {
+    .footer {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer__nameCo {
+        bottom: -40px;
+
+        position: static;
+        margin: 31px auto;
+
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .footer__logo {
+        padding-top: 23px;
+    }
+}

@@ -1,0 +1,12 @@
+.footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (max-width: 799px) {
+    .footer {
+        flex-direction: column;
+    }
+}

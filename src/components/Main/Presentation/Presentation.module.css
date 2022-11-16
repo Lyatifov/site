@@ -101,7 +101,7 @@
 
 @media (max-width: 799px) {
     .presentation {
-        background-position: -360px 0;
+        background-position: center;
         padding: 38px 10px;
         height: 318px;
         justify-content: space-around;
