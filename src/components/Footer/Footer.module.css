@@ -5,6 +5,9 @@
 
 .footer__hat {
     position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E7E6E6;
+
 }
 
 .footer__nameCo {

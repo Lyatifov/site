@@ -1,0 +1,19 @@
+.dignity {
+    
+    min-width: 799px;
+    max-width: 1440px;
+    width: 100%;
+    height: 469px;
+    padding: 20px;
+}
+
+/* @media (max-width: 799px) {
+    .dignity {
+        background: url("../../../../../img/swiper/presentation_1.png");
+        min-width: 799px;
+        max-width: 1440px;
+        width: 100%;
+        height: 469px;
+        padding: 20px;
+    }
+} */

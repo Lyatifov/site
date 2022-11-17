@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className={cl.footer__nameCo}>©  ООО "Мебельная компания "Лером" 2021</div>
             </div>
 
-            <FooterNav />
+            {/* <FooterNav /> */}
         </footer>
     );
 }

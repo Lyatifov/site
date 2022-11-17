@@ -1,6 +1,6 @@
 .presentation {
-    background-image: url("../../../img/presentation.png");
-    height: 460px;
+    /* background-image: url("../../../img/swiper/presentation.png"); */
+    /* height: 460px;
     box-sizing: border-box;
     padding: 5% 15%;
     display: flex;
@@ -10,10 +10,8 @@
     text-align: left;
     letter-spacing: -0.5px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
 }
-
-
 
 
 .presentation__presentationWrapper {
@@ -162,7 +160,7 @@
     }
 
     .presentation__dignityTitle {
-        
+
         width: 230px;
         height: 50px;
         font-size: 20px;

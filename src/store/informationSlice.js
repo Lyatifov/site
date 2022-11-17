@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 import img from "../img/demo.png"
 import img2 from "../img/addit_inform.png"
+import presentation_1 from "../img/swiper/presentation_1.png"
+import presentation_2 from "../img/swiper/presentation_2.png"
+import img_1 from "../img/icon/presentation/dignity_icon_1.png"
+import img_2 from "../img/icon/presentation/dignity_icon_2.png"
+import img_3 from "../img/icon/presentation/dignity_icon_3.png"
 
 const informationSlice = createSlice({
     name: "information",
@@ -158,6 +163,110 @@ const informationSlice = createSlice({
                 id: 103,
                 title: "Контакты",
             },
+        ],
+        presentationSlide: [
+            {
+                id: 101,
+                version: 1,
+                title: "Производим мебель с 1997 года",
+                text_1: "Мы готовы принять и передать ваш  заказ на мебель региональному представительству.",
+                text_2: "Для этого пришлите ваши пожелания и контактную информацию нам на почту ",
+                email: "zakaz@lerom.ru",
+                img: presentation_1,
+                dignity: [
+                    {
+                        id: 1,
+                        icon: img_1,
+                        text1: '>100 000',
+                        text1_detail: 'м²',
+                        text2: 'Производственная площадь.'
+                    },
+
+                    {
+                        id: 2,
+                        icon: img_2,
+                        text1: '>1 100',
+                        text1_detail: 'чел',
+                        text2: 'Рабочий коллектив.'
+                    },
+
+                    {
+                        id: 3,
+                        icon: img_3,
+                        text1: 'Официально',
+                        text1_detail: null,
+                        text2: 'Мы находимся в национальном реестре промышленных предприятий.'
+                    },
+                ]
+            },
+            {
+                id: 102,
+                version: 2,
+                title: "Производим мебель с 1997 года",
+                text_1: "Мы готовы принять и передать ваш  заказ на мебель региональному представительству.",
+                text_2: "Для этого пришлите ваши пожелания и контактную информацию нам на почту ",
+                email: "zakaz@lerom.ru",
+                img: presentation_2,
+                dignity: [
+                    {
+                        id: 1,
+                        icon: img_1,
+                        text1: '>100 000',
+                        text1_detail: 'м²',
+                        text2: 'Производственная площадь.'
+                    },
+
+                    {
+                        id: 2,
+                        icon: img_2,
+                        text1: '>1 100',
+                        text1_detail: 'чел',
+                        text2: 'Рабочий коллектив.'
+                    },
+
+                    {
+                        id: 3,
+                        icon: img_3,
+                        text1: 'Официально',
+                        text1_detail: null,
+                        text2: 'Мы находимся в национальном реестре промышленных предприятий.'
+                    },
+                ]
+            },
+            {
+                id: 103,
+                version: 3,
+                title: "Производим мебель с 1997 года",
+                text_1: "Мы готовы принять и передать ваш  заказ на мебель региональному представительству.",
+                text_2: "Для этого пришлите ваши пожелания и контактную информацию нам на почту ",
+                email: "zakaz@lerom.ru",
+                img: presentation_1,
+                dignity: [
+                    {
+                        id: 1,
+                        icon: img_1,
+                        text1: '>100 000',
+                        text1_detail: 'м²',
+                        text2: 'Производственная площадь.'
+                    },
+
+                    {
+                        id: 2,
+                        icon: img_2,
+                        text1: '>1 100',
+                        text1_detail: 'чел',
+                        text2: 'Рабочий коллектив.'
+                    },
+
+                    {
+                        id: 3,
+                        icon: img_3,
+                        text1: 'Официально',
+                        text1_detail: null,
+                        text2: 'Мы находимся в национальном реестре промышленных предприятий.'
+                    },
+                ]
+            }
         ]
     }
 })
