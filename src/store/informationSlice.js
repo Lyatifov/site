@@ -6,6 +6,9 @@ import presentation_2 from "../img/swiper/presentation_2.png"
 import img_1 from "../img/icon/presentation/dignity_icon_1.png"
 import img_2 from "../img/icon/presentation/dignity_icon_2.png"
 import img_3 from "../img/icon/presentation/dignity_icon_3.png"
+import img_4 from "../img/icon/presentation/dignity_icon_4.png"
+import img_5 from "../img/icon/presentation/dignity_icon_5.png"
+import Button from "../components/UI/Button/Button"
 
 const informationSlice = createSlice({
     name: "information",
@@ -13,6 +16,7 @@ const informationSlice = createSlice({
         demoPorduct: [
             {
                 id: 1,
+                version: 1,
                 title: 'Гостиные',
                 description: 'Мини текст описания и преимущества покупки данного направления.',
                 availability: '20',
@@ -21,14 +25,17 @@ const informationSlice = createSlice({
             },
             {
                 id: 2,
+                version: 2,
                 title: 'Спальни',
                 description: 'Мини текст описания и преимущества покупки данного направления.',
                 availability: '30',
                 price: '60.000',
-                img: img
+                img: img,
+
             },
             {
                 id: 3,
+                version: 1,
                 title: 'Детские',
                 description: 'Мини текст описания и преимущества покупки данного направления.',
                 availability: '14',
@@ -154,6 +161,7 @@ const informationSlice = createSlice({
             {
                 id: 101,
                 title: "Рассрочка",
+                rout: "href='#'"
             },
             {
                 id: 102,
@@ -202,34 +210,26 @@ const informationSlice = createSlice({
             {
                 id: 102,
                 version: 2,
-                title: "Производим мебель с 1997 года",
+                title: "Бесплатно",
                 text_1: "Мы готовы принять и передать ваш  заказ на мебель региональному представительству.",
                 text_2: "Для этого пришлите ваши пожелания и контактную информацию нам на почту ",
                 email: "zakaz@lerom.ru",
                 img: presentation_2,
+                btn: "sad",
+                button: <Button onClick={() => console.log('!')}>Подробнее</Button>,
                 dignity: [
                     {
                         id: 1,
-                        icon: img_1,
-                        text1: '>100 000',
-                        text1_detail: 'м²',
-                        text2: 'Производственная площадь.'
+                        icon: img_4,
+                        text1: 'ПОДЪЕМ',
+                        text2: 'Бесплатно произведём подъем на ваш этаж.',
                     },
 
                     {
                         id: 2,
-                        icon: img_2,
-                        text1: '>1 100',
-                        text1_detail: 'чел',
-                        text2: 'Рабочий коллектив.'
-                    },
-
-                    {
-                        id: 3,
-                        icon: img_3,
-                        text1: 'Официально',
-                        text1_detail: null,
-                        text2: 'Мы находимся в национальном реестре промышленных предприятий.'
+                        icon: img_5,
+                        text1: 'СБОРКА',
+                        text2: 'Бесплатно соберём мебель любой сложности и конфигурации.',
                     },
                 ]
             },

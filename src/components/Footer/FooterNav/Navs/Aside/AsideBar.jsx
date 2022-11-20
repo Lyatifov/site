@@ -6,8 +6,8 @@ export default function AsideBar({ data }) {
             <div className={cl.aside}>
                 {
                     data.map((item, index) => {
-                        return <div className={index ? cl.aside_border : ""}>
-                            <a key={item.id}>{item.title}</a>
+                        return <div key={item.id} className={index ? cl.aside_border : ""}>
+                            <a {...data.rout}>{item.title}</a>
                         </div>
                     })
                 }

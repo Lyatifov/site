@@ -4,7 +4,6 @@
     height: 42.5px;
     padding: 5px;
     cursor: pointer;
-
 }
 
 .BurgerButtonMenu>div {
@@ -16,24 +15,19 @@
     margin-bottom: 2.5px;
     border-radius: 16px;
     transition-duration: .25s;
-    /* transition-delay: .25s; */
 }
 
 .BurgerButtonMenu_active>.BurgerButtonMenu__item1 {
     transition-duration: .25s;
-    /* transition-delay: .25s; */
     transform: translate(5px, 0) rotate(45deg) translate(3px, 11px);
 }
 
 .BurgerButtonMenu_active>.BurgerButtonMenu__item2 {
     transition-duration: .25s;
-    /* transition-delay: .25s; */
-    /* transform: translate(-50px); */
     opacity: 0;
 }
 
 .BurgerButtonMenu_active>.BurgerButtonMenu__item3 {
     transition-duration: .25s;
-    /* transition-delay: .25s; */
     transform: translate(5px, 0) rotate(-45deg) translate(3px, -11px);
 }

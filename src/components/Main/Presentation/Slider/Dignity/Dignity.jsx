@@ -1,5 +1,6 @@
 import cl from "./Dignity.module.css"
-import DiginityVersion1 from "./version/DiginityVersion1/DiginityVersion1";
+import DiginityVersion1 from "./version/DiginityVersion1/DiginityVersion1"
+import DiginityVersion2 from "./version/DiginityVersion2/DiginityVersion2";
 
 export default function Dignity({ item }) {
 
@@ -9,21 +10,21 @@ export default function Dignity({ item }) {
                 return (
                     <DiginityVersion1 item={item} />
                 )
-                break;
+                break
             case 2:
                 return (
-                    <DiginityVersion1 item={item} />
+                    <DiginityVersion2 item={item} />
                 )
-                break;
+                break
             case 3:
                 return (
                     <DiginityVersion1 item={item} />
                 )
-                break;
+                break
 
             default:
                 return
-                break;
+                break
         }
     }
 

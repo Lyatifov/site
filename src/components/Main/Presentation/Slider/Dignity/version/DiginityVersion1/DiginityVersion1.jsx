@@ -58,13 +58,6 @@ export default function DiginityVersion1({ item }) {
                     }
                 </div>
             </div>
-
-
-
-
-
-
-
         </div>
     );
 }

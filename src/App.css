@@ -79,3 +79,30 @@
   opacity: var(--swiper-pagination-bullet-opacity, 1) !important;
   background: var(--swiper-pagination-color, var(--swiper-theme-color)) !important;
 }
+
+@media (max-width: 799px) {
+  .swiper {
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    height: 420px;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper {
+    height: 390px;
+  }
+}
+
+@media (max-width: 750px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+}

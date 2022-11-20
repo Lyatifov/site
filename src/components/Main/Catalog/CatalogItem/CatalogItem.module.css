@@ -1,0 +1,23 @@
+.catalog__item {
+    width: 300px;
+    height: 450px;
+    border: 1px solid #004583;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.catalogItem__button {
+    padding: 14px 22px;
+    border-radius: 5px;
+    border: none;
+    background: #004583;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
