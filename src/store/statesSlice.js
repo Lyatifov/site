@@ -5,14 +5,23 @@ const statesSlice = createSlice({
     initialState: {
         isActiveMiniMenu: false,
         loading: true,
-        error: null
+        error: null,
+        // isMobileVersion: false
     },
 
     reducers: {
         toggleIsActiveMiniMenu(state, action) {
             state.isActiveMiniMenu = !state.isActiveMiniMenu
-        }
+        },
 
+        // toggleMobileVersion(state, action) {
+        //     if (action.payload <= 500) {
+        //         state.isMobileVersion = true
+        //     } else {
+        //         state.isMobileVersion = false
+        //     }
+        //     console.log(state.isMobileVersion);
+        // }
 
         // createTodo(state, action) {
         //     state.todos.push(action.payload)
@@ -44,7 +53,7 @@ const statesSlice = createSlice({
 
 })
 
-export const { toggleIsActiveMiniMenu } = statesSlice.actions
+export const { toggleIsActiveMiniMenu, toggleMobileVersion } = statesSlice.actions
 
 export default statesSlice.reducer
 

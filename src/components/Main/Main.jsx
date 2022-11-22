@@ -33,13 +33,13 @@ export default function Main() {
 
     return (
         <main className={cl.main}>
-            <article>
-                <Catalog />
+            
+            <Catalog />
 
-                {/* <Presentation />
+            {/* <Presentation />
                 <Demo isModileVersion={isModileVersion} data={demoPorduct} />
                 <Demo isModileVersion={isModileVersion} data={additInform} title="Информация" /> */}
-            </article>
+
         </main>
     )
 }

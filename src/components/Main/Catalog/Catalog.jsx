@@ -1,18 +1,34 @@
 import cl from "./Catalog.module.css"
 import { useSelector } from "react-redux"
-import CatalogItem from "./CatalogItem/CatalogItem"
+import CatalogItem from "./Items/CatalogItem"
+import CatalogCategories from "./Categories/CatalogCategories"
+import { useState } from "react"
 
 export default function Catalog() {
 
     const catalog = useSelector(state => state.catalog.catalog)
+    const categories = useSelector(state => state.catalog.categories)
+
+    const [isTargetId, setIsTargetId] = useState(null)
+
+    const targetToggle = (id) => {
+        if (id === isTargetId) {
+            setIsTargetId(null)
+        } else {
+            setIsTargetId(id)
+        }
+    }
 
     return (
-        <saction className={cl.catalog}>
-            {
-                catalog.map(item =>
-                    <CatalogItem item={item} />
-                )
-            }
-        </saction>
+        <div className={cl.catalog}>
+            <CatalogCategories categories={categories} />
+            <article className={cl.catalog__list}>
+                {
+                    catalog.map((item, index) =>
+                        <CatalogItem targetToggle={targetToggle} isTarget={item.id === isTargetId ? true : false} key={index * 12} item={item} />
+                    )
+                }
+            </article>
+        </div>
     )
 }
