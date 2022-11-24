@@ -1,0 +1,7 @@
+.info__textArea {
+    display: none;
+}
+
+.info__textArea_selected {
+    text-align: left;
+}

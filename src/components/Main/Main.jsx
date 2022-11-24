@@ -4,6 +4,7 @@ import Presentation from "./Presentation/Presentation"
 import { useEffect, useState } from 'react'
 import { useSelector } from "react-redux"
 import Catalog from "./Catalog/Catalog"
+import ItemPage from "./ItemPage/ItemPage"
 
 export default function Main() {
 
@@ -33,8 +34,11 @@ export default function Main() {
 
     return (
         <main className={cl.main}>
-            
-            <Catalog />
+
+            <ItemPage />
+
+
+            {/* <Catalog /> */}
 
             {/* <Presentation />
                 <Demo isModileVersion={isModileVersion} data={demoPorduct} />

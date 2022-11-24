@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: space-around;
     position: static;
+    padding-bottom: 20px;
 }
 
 .catalog__itemImg>img {
@@ -152,6 +153,7 @@
 
     .catalogItem__buttonWrapper {
         height: 0;
+        width: 0;
     }
 
     .catalogItem__buttonWrapper_target {

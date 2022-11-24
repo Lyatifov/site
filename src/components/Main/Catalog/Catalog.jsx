@@ -1,6 +1,6 @@
 import cl from "./Catalog.module.css"
 import { useSelector } from "react-redux"
-import CatalogItem from "./Items/CatalogItem"
+import CatalogItem from "./Item/CatalogItem"
 import CatalogCategories from "./Categories/CatalogCategories"
 import { useState } from "react"
 

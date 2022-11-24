@@ -1,0 +1,103 @@
+.item {
+    margin: 25px 15px;
+}
+
+.item__img {
+    border: 1px solid #000000;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+
+.item__img>img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.item__textBlock {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.item__title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #071828;
+}
+
+.item__description {
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: #071828;
+}
+
+.item__priceWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.item__price {
+    display: flex;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #071828;
+}
+
+.item__price>div {
+    padding: 5px;
+}
+
+.item__priceSum {
+    margin-left: 10px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51x;
+
+    text-align: right;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+
+    color: #071828;
+}
+
+.item__priceButtonWrapper {
+    margin-top: 25px;
+    display: inline-flex;
+}
+
+.item__priceButton {
+    background: #004583;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+    padding: 15px 35px;
+
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
