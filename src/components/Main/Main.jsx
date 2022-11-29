@@ -4,7 +4,8 @@ import Presentation from "./Presentation/Presentation"
 import { useEffect, useState } from 'react'
 import { useSelector } from "react-redux"
 import Catalog from "./Catalog/Catalog"
-import ItemPage from "./ItemPage/ItemPage"
+import Item from "./Item/Item"
+import Info from "./Info/Info"
 
 export default function Main() {
 
@@ -35,8 +36,9 @@ export default function Main() {
     return (
         <main className={cl.main}>
 
-            <ItemPage />
+            <Info />
 
+            {/* <Item /> */}
 
             {/* <Catalog /> */}
 

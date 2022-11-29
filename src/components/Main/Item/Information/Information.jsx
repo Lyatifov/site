@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import cl from "./InformationBar.module.css"
+import cl from "./Information.module.css"
 import InfoItem from "./Item/InfoItem"
 import InfoLabel from "./label/InfoLabel"
 

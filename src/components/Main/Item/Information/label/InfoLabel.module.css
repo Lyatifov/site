@@ -44,7 +44,7 @@ label:hover {
     border-bottom: 1px solid #fff;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     label {
         font-size: 0;
     }

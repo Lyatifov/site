@@ -96,8 +96,42 @@
 }
 
 
+@media (min-width: 768px) {
+    .item {
+        margin: 40px 0 70px 0;
+        display: flex;
+    }
 
+    .item__img {
+        border: 1px solid #000000;
+        height: auto;
+        display: flex;
+        margin: 0;
+    }
 
+    .item__img>img {
+        margin: auto;
+        width: 100%;
+        height: auto;
+        min-width: 400px;
+    }
 
+    .item__body {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    .item__textBlock {
+        margin: 0 0;
+        text-align: left;
+    }
 
+    .item__title {
+        color: #071828;
+        font-size: 25px;
+        line-height: 26px;
+    }
+
+}

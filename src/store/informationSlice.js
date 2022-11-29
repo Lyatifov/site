@@ -10,9 +10,42 @@ import img_4 from "../img/icon/presentation/dignity_icon_4.png"
 import img_5 from "../img/icon/presentation/dignity_icon_5.png"
 import Button from "../components/UI/Button/Button"
 
+import icon_1 from "../img/icon/header/icon_1.png"
+import icon_2 from "../img/icon/header/icon_2.png"
+import icon_3 from "../img/icon/header/icon_3.png"
+
 const informationSlice = createSlice({
     name: "information",
     initialState: {
+        mainInfo:
+        {
+            workingHours: {
+                icon: [
+                    icon_1,
+                    icon_2
+                ],
+                list: [
+                    "Пн-Пт с 10:00 до 20:00",
+                    "Сб-Вс с 10:00 до 19:00"
+                ]
+            },
+            phone: {
+                icon: [
+                    icon_3,
+                    icon_3
+                ],
+                title: ["Отдел продаж:", "Звонки по России:"],
+                list: [
+                    "8 (9**) ***-**-**",
+                    "8 (9**) ***-**-**"
+                ]
+            },
+            extensionPhone: [
+                "8 (800) ***-**-**",
+            ],
+            address: "г. Москва ул Феодосийская д.1 к.1 офис 111"
+
+        },
         demoPorduct: [
             {
                 id: 1,
