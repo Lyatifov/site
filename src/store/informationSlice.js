@@ -114,18 +114,22 @@ const informationSlice = createSlice({
                     {
                         id: 21,
                         title: "О компании",
+                        to: "/info",
                     },
                     {
                         id: 22,
                         title: "Производство",
+                        to: "/info",
                     },
                     {
                         id: 23,
                         title: "Награды",
+                        to: "/info",
                     },
                     {
                         id: 24,
                         title: "Сертификаты",
+                        to: "/info",
                     },
                 ]
             },
@@ -135,18 +139,22 @@ const informationSlice = createSlice({
                     {
                         id: 31,
                         title: "Покупателю",
+                        to: "/about",
                     },
                     {
                         id: 32,
                         title: "Как сделать заказ",
+                        to: "/about",
                     },
                     {
                         id: 33,
                         title: "Рекомендации по сборке",
+                        to: "/about",
                     },
                     {
                         id: 34,
                         title: "Договор публичной оферты",
+                        to: "/about",
                     },
 
                 ]
@@ -157,18 +165,22 @@ const informationSlice = createSlice({
                     {
                         id: 41,
                         title: "Полезная информация",
+                        to: "/about",
                     },
                     {
                         id: 42,
                         title: "Всё о фасадах",
+                        to: "/about",
                     },
                     {
                         id: 43,
                         title: "Всё о фурнитуре",
+                        to: "/about",
                     },
                     {
                         id: 44,
                         title: "Всё о ЛДСП",
+                        to: "/about",
                     },
 
                 ]
@@ -179,14 +191,17 @@ const informationSlice = createSlice({
                     {
                         id: 51,
                         title: "3D-моделирование",
+                        to: "/about",
                     },
                     {
                         id: 52,
                         title: "Запустить онлайн, от 2 Мбит/с",
+                        to: "/about",
                     },
                     {
                         id: 53,
                         title: "Скачать на компьютер, 606 Мб",
+                        to: "/about",
                     }
                 ]
             },
@@ -195,15 +210,17 @@ const informationSlice = createSlice({
             {
                 id: 101,
                 title: "Рассрочка",
-                rout: "href='#'"
+                to: "/about",
             },
             {
                 id: 102,
                 title: "Гарантия",
+                to: "/about",
             },
             {
                 id: 103,
                 title: "Контакты",
+                to: "/info",
             },
         ],
         presentationSlide: [

@@ -1,4 +1,4 @@
-import icon from "../../../../img/icon/demo_description/icon.png"
+import icon from "../../../../../img/icon/demo_description/icon.png"
 import cl from './Description.module.css'
 
 export default function Description({ item, reverse }) {

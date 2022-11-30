@@ -1,5 +1,6 @@
 import cl from "./Menu.module.css"
 import { useSelector } from "react-redux"
+import { Link } from 'react-router-dom'
 
 
 export default function Menu() {
@@ -28,16 +29,24 @@ export default function Menu() {
                         <div><img src={mainInfo.workingHours.icon[1]} alt="&#955;" /></div>
                     </div>
                     <div className={cl.menu__informationText}>
-                        Наши салоны
+                        <Link to='/info'>Наши салоны</Link>
                     </div>
                 </div>
             </div>
 
             <nav className={cl.menu__nav}>
-                <div className={cl.menu__navItem}>О нас</div>
-                <div className={cl.menu__navItem}>3D - моделирование</div>
-                <div className={cl.menu__navItem}>Покупателю</div>
-                <div className={cl.menu__navItem}>Доставка и оплата</div>
+                <div className={cl.menu__navItem}>
+                    <Link to='/info'>О нас</Link>
+                </div>
+                <div className={cl.menu__navItem}>
+                    <Link to='/about'>3D - моделирование</Link>
+                </div>
+                <div className={cl.menu__navItem}>
+                    <Link to='/about'>Покупателю</Link>
+                </div>
+                <div className={cl.menu__navItem}>
+                    <Link to='/about'>Доставка и оплата</Link>
+                </div>
             </nav>
 
             <div >

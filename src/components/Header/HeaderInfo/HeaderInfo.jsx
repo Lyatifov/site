@@ -1,6 +1,7 @@
 import logo from "../../../img/logo.png"
 import cl from "./HeaderInfo.module.css"
 import { useSelector } from "react-redux"
+import { Link } from 'react-router-dom'
 
 export default function HeaderInfo() {
 
@@ -25,12 +26,14 @@ export default function HeaderInfo() {
                         }
                     </div>
                     <div>
-                        Наши салоны
+                        <Link to='/info'>Наши салоны</Link>
                     </div>
                 </div>
             </div>
             <div className={cl.header__logo}>
-                <img src={logo} alt="logo" />
+                <Link to='/'>
+                    <img src={logo} alt="logo" />
+                </Link>
             </div>
             <div className={cl.header__information + ' ' + cl.header__information_marginRight}>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textRight}>

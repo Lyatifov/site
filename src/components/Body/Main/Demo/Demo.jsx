@@ -1,5 +1,5 @@
 import Description from './Description/Description'
-import imgOtherInformation from "../../../img/other.png"
+import imgOtherInformation from "../../../../img/other.png"
 import cl from './Demo.module.css'
 
 
