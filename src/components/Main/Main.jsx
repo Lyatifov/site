@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import Catalog from "./Catalog/Catalog"
 import Item from "./Item/Item"
 import Info from "./Info/Info"
+import About from "./About/About"
 
 export default function Main() {
 
@@ -36,7 +37,9 @@ export default function Main() {
     return (
         <main className={cl.main}>
 
-            <Info />
+            <About />
+
+            {/* <Info /> */}
 
             {/* <Item /> */}
 

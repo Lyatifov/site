@@ -1,7 +1,4 @@
 import logo from "../../../img/logo.png"
-// import icon_1 from "../../../img/icon/header/icon_1.png"
-// import icon_2 from "../../../img/icon/header/icon_2.png"
-// import icon_3 from "../../../img/icon/header/icon_3.png"
 import cl from "./HeaderInfo.module.css"
 import { useSelector } from "react-redux"
 

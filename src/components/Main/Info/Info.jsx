@@ -39,6 +39,13 @@ export default function Info() {
           </div>
 
           <div>
+            <div className={cl.info__title}>Наша почта</div>
+            <div>
+              <div className={cl.info__text}>{mainInfo.email}</div>
+            </div>
+          </div>
+
+          <div>
             <div className={cl.info__title}>Наш адрес</div>
             <div>
               <div className={cl.info__text}>{mainInfo.address}</div>

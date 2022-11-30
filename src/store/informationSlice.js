@@ -43,6 +43,7 @@ const informationSlice = createSlice({
             extensionPhone: [
                 "8 (800) ***-**-**",
             ],
+            email: "email@email.com",
             address: "г. Москва ул Феодосийская д.1 к.1 офис 111"
 
         },
@@ -248,8 +249,8 @@ const informationSlice = createSlice({
                 text_2: "Для этого пришлите ваши пожелания и контактную информацию нам на почту ",
                 email: "zakaz@lerom.ru",
                 img: presentation_2,
-                btn: "sad",
-                button: <Button onClick={() => console.log('!')}>Подробнее</Button>,
+                // btn: "sad",
+                // button: <Button onClick={() => console.log('!')}>Подробнее</Button>,
                 dignity: [
                     {
                         id: 1,
