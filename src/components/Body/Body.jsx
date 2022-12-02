@@ -5,8 +5,6 @@ import PublicRoutes from "../routers/routers"
 
 export default function Main() {
 
-    console.log(PublicRoutes)
-
     return (
         <Routes>
             {

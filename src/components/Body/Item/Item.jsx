@@ -1,23 +1,21 @@
 import cl from "./Item.module.css"
 import { useSelector } from "react-redux"
+import { useParams } from 'react-router-dom'
 import Information from "./Information/Information"
-import Body from "./Body/Body"
+import ItemBody from "./Body/Body"
 
-export default function ItemPage() {
+export default function Item() {
 
     const catalog = useSelector(state => state.catalog.catalog)
 
-    const data = catalog[0]
+    const params = useParams()
 
-    console.log(data)
+    const item = catalog.filter(item => item.id == params.id)
 
     return (
         <article className={cl.item}>
-
-            <Body data={data} />
-
+            <ItemBody item={item} />
             <Information />
-
         </article>
     )
 }

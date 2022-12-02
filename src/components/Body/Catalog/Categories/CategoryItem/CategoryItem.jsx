@@ -21,8 +21,8 @@ export default function CategoryItem({ item, br }) {
             <div className={isAction ? cl.subcategories + " " + cl.subcategories_action : cl.subcategories}>
                 <ul>
                     {
-                        item.subcategories.map(el =>
-                            <li>{el.title}</li>
+                        item.subcategories.map((el, index) =>
+                            <li key={index}>{el.title}</li>
                         )
                     }
                 </ul>

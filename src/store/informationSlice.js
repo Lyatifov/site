@@ -114,22 +114,18 @@ const informationSlice = createSlice({
                     {
                         id: 21,
                         title: "О компании",
-                        to: "/info",
                     },
                     {
                         id: 22,
                         title: "Производство",
-                        to: "/info",
                     },
                     {
                         id: 23,
                         title: "Награды",
-                        to: "/info",
                     },
                     {
                         id: 24,
                         title: "Сертификаты",
-                        to: "/info",
                     },
                 ]
             },
@@ -210,17 +206,14 @@ const informationSlice = createSlice({
             {
                 id: 101,
                 title: "Рассрочка",
-                to: "/about",
             },
             {
                 id: 102,
                 title: "Гарантия",
-                to: "/about",
             },
             {
                 id: 103,
                 title: "Контакты",
-                to: "/info",
             },
         ],
         presentationSlide: [

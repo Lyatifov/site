@@ -1,9 +1,9 @@
 import cl from "./DiginityVersion1.module.css"
 
 
-function Dignity(item) {
+function Dignity({ item, index }) {
     return (
-        <div className={cl.dignity}>
+        <div key={index } className={cl.dignity}>
             <div className={cl.dignity__icon}>
                 <img src={item.icon} alt="&#955;" />
             </div>
@@ -52,8 +52,8 @@ export default function DiginityVersion1({ item }) {
                 <div className={cl.dignit__dignityWrapper}>
 
                     {
-                        item.dignity.map(item =>
-                            Dignity(item)
+                        item.dignity.map((item, index) =>
+                            Dignity({ item, index })
                         )
                     }
                 </div>

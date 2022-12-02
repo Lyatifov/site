@@ -17,8 +17,8 @@ export default function Menu() {
                     </div>
                     <div className={cl.menu__informationText}>
                         {
-                            mainInfo.workingHours.list.map(text =>
-                                <div>{text}</div>
+                            mainInfo.workingHours.list.map((text, index) =>
+                                <div key={index}>{text}</div>
                             )
                         }
                     </div>
@@ -55,8 +55,8 @@ export default function Menu() {
                     <div className={cl.menu__contacts}>
                         <div className={cl.menu_greyText}>Отдел продаж:</div>
                         {
-                            mainInfo.phone.list.map(text =>
-                                <div className={cl.menu__phone}>
+                            mainInfo.phone.list.map((text, index) =>
+                                <div key={index} className={cl.menu__phone}>
                                     <div className={cl.menu__phoneIcon}>
                                         <img src={mainInfo.phone.icon[0]} alt="&#955;" />
                                     </div>
@@ -70,8 +70,8 @@ export default function Menu() {
                     <div className={cl.menu__contacts}>
                         <div className={cl.menu_greyText}>Звонки по России:</div>
                         {
-                            mainInfo.extensionPhone.map(text =>
-                                <div className={cl.menu__phone}>
+                            mainInfo.extensionPhone.map((text, index) =>
+                                <div key={index} className={cl.menu__phone}>
                                     <div className={cl.menu__phoneIcon}>
                                         <img src={mainInfo.phone.icon[0]} alt="&#955;" />
                                     </div>

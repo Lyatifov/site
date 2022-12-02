@@ -9,6 +9,7 @@ export default [
     { path: '/about', element: <About /> },
     { path: '/info', element: <Info /> },
     { path: '/catalog', element: <Catalog /> },
-    { path: '/item', element: <Item /> },
+    { path: '/item/', element: <Item /> },
+    { path: '/item/:id', element: <Item /> },
     { path: '*', element: <Main /> }
 ]

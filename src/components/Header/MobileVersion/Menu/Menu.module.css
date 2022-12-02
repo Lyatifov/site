@@ -57,6 +57,11 @@
     margin-left: 5px;
 }
 
+.menu__informationText>a {
+    text-decoration-line: underline;
+    color: #004583;
+}
+
 .menu__nav {
     padding: 10px 0;
     border-top: 2px solid #F3F3F3;
@@ -64,6 +69,11 @@
 
 .menu__navItem {
     margin: 17px;
+}
+
+.menu__navItem>a {
+    color: black;
+    font-weight: 600;
 }
 
 .menu__contacts {

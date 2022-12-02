@@ -15,8 +15,8 @@ export default function Info() {
             <div className={cl.info__title}>Мы работаем</div>
             <div>
               {
-                mainInfo.workingHours.list.map(text =>
-                  <div className={cl.info__text}>{text}</div>
+                mainInfo.workingHours.list.map((text, index) =>
+                  <div key={index} className={cl.info__text}>{text}</div>
                 )
               }
             </div>
@@ -26,13 +26,13 @@ export default function Info() {
             <div className={cl.info__title}>Наши контакты</div>
             <div>
               {
-                mainInfo.phone.list.map(text =>
-                  <div className={cl.info__text}>{text}</div>
+                mainInfo.phone.list.map((text, index) =>
+                  <div key={index} className={cl.info__text}>{text}</div>
                 )
               }
               {
-                mainInfo.extensionPhone.map(text =>
-                  <div className={cl.info__text}>{text}</div>
+                mainInfo.extensionPhone.map((text, index) =>
+                  <div key={index} className={cl.info__text}>{text}</div>
                 )
               }
             </div>

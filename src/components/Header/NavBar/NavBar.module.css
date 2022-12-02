@@ -8,6 +8,15 @@
     padding: 0 8%;
 }
 
+.nav__item>a {
+    color: black;
+}
+
+.nav__item_redText>a {
+    color: #BB2822;
+    font-weight: 700;
+}
+
 @media (max-width:799px) {
     .nav {
         visibility: hidden;
@@ -58,7 +67,3 @@
     font-family: 'Inter', sans-serif;
 }
 
-.nav__item_redText {
-    color: #BB2822;
-    font-weight: 700;
-}

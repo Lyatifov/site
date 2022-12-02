@@ -15,6 +15,10 @@
     width: auto;
 }
 
+.nav__column>a {
+    color: #071828;
+}
+
 .nav__firstLine {
     font-weight: 700;
     font-size: 16px;

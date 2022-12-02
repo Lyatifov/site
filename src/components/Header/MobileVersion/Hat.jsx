@@ -14,7 +14,7 @@ export default function Hat() {
                 <div>
                     <img src={icon_1} alt="&#955;" />
                 </div>
-                <div>
+                <div className={cl.hat__link}>
                     <Link to='/info'>Наши салоны</Link>
                 </div>
             </div>

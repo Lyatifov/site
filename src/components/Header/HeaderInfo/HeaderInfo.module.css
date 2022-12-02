@@ -8,6 +8,11 @@
     padding: 15px 10%;
 }
 
+.header__link>a {
+    text-decoration-line: underline;
+    color: #004583;
+}
+
 @media (max-width:799px) {
     .header {
         padding: 0;

@@ -7,11 +7,9 @@ function NavForm({ item }) {
         <div className={cl.nav__column}>
             {
                 item.sections.map((item, index) =>
-                    <a key={item.id} className={index ? "" : cl.nav__firstLine}>
-                        <Link to={item.to}>
-                            {item.title}
-                        </Link>
-                    </a>
+                    <Link key={item.id} className={index ? "" : cl.nav__firstLine} to={item.to}>
+                        {item.title}
+                    </Link>
                 )
             }
         </div>

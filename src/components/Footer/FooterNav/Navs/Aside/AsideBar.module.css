@@ -8,12 +8,14 @@
 
     text-align: center;
     letter-spacing: -0.5px;
-
-    color: #004583;
 }
 
 .aside_border {
     border-top: 1px solid #E7E6E6;
+}
+
+.aside__link>a {
+    color: #004583;
 }
 
 .aside>div {
@@ -27,10 +29,6 @@
         padding-bottom: 30px;
         font-size: 13px;
         line-height: 28px;
-    }
-
-    .aside_border {
-        border-top: 1px solid #E7E6E6;
     }
 
     .aside>div {

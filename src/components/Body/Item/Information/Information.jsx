@@ -53,7 +53,7 @@ export default function InformationBar() {
     ]
 
     return (
-        <saction>
+        <section>
             <div className={cl.info}>
                 {
                     arr.map(item =>
@@ -69,6 +69,6 @@ export default function InformationBar() {
                     }
                 </div>
             </div>
-        </saction>
+        </section>
     )
 }

@@ -1,7 +1,10 @@
 import cl from "./Body.module.css"
 import Button from "../../../UI/Button/Button"
 
-export default function ItemBody({ data }) {
+export default function ItemBody({ item }) {
+
+    const data = item[0]
+
     return (
         <div className={cl.item}>
             <div className={cl.item__img}>

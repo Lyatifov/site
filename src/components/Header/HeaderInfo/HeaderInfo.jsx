@@ -12,20 +12,20 @@ export default function HeaderInfo() {
             <div className={cl.header__information}>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_spaceAround}>
                     {
-                        mainInfo.workingHours.icon.map(icon =>
-                            <div> <img src={icon} /> </div>
+                        mainInfo.workingHours.icon.map((icon, index) =>
+                            <div key={index}> <img src={icon} /> </div>
                         )
                     }
                 </div>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textLeft}>
                     <div>
                         {
-                            mainInfo.workingHours.list.map(text =>
-                                <div>{text}</div>
+                            mainInfo.workingHours.list.map((text, index) =>
+                                <div key={index}>{text}</div>
                             )
                         }
                     </div>
-                    <div>
+                    <div className={cl.header__link}>
                         <Link to='/info'>Наши салоны</Link>
                     </div>
                 </div>
@@ -38,30 +38,30 @@ export default function HeaderInfo() {
             <div className={cl.header__information + ' ' + cl.header__information_marginRight}>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textRight}>
                     {
-                        mainInfo.phone.title.map(text =>
-                            <div>{text}</div>
+                        mainInfo.phone.title.map((text, index) =>
+                            <div key={index}>{text}</div>
                         )
                     }
                 </div>
                 <div className={cl.header__informationItem}>
                     {
-                        mainInfo.phone.icon.map(icon =>
-                            <div> <img src={icon} /> </div>
+                        mainInfo.phone.icon.map((icon, index) =>
+                            <div key={index}> <img src={icon} /> </div>
                         )
                     }
                 </div>
                 <div className={cl.header__informationItem + ' ' + cl.header__informationItem_textLeft}>
                     <div>
                         {
-                            mainInfo.phone.list.map(text =>
-                                <div>{text}</div>
+                            mainInfo.phone.list.map((text, index) =>
+                                <div key={index}>{text}</div>
                             )
                         }
                     </div>
                     <div>
                         {
-                            mainInfo.extensionPhone.map(text =>
-                                <div>{text}</div>
+                            mainInfo.extensionPhone.map((text, index) =>
+                                <div key={index}>{text}</div>
                             )
                         }
                         <div className={cl.header__textRed}>Бесплатно</div>

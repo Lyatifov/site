@@ -29,6 +29,11 @@
     margin: auto auto;
 }
 
+.hat__link>a {
+    text-decoration-line: underline;
+    color: #004583;
+}
+
 .hat__logo>img {
     width: 93px;
     height: 46px;

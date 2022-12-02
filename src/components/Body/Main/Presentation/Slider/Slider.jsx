@@ -30,8 +30,8 @@ export default function Slider() {
         // }}
         >
             {
-                presentationSlide.map(item =>
-                    <SwiperSlide>
+                presentationSlide.map((item, index) =>
+                    <SwiperSlide key={index}>
                         <Dignity item={item} />
                     </SwiperSlide>
 

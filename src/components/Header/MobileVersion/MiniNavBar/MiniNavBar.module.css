@@ -27,6 +27,10 @@
     margin: auto auto;
 }
 
+.nav__item>a {
+    color: white;
+}
+
 .nav_backBlue {
     background: #004583;
 }
