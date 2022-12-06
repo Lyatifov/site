@@ -1,5 +1,6 @@
 import cl from "./Horizontal.module.css"
 import { Link } from "react-router-dom"
+import AutoScroll from "../../../../AutoScroll/AutoScroll"
 
 function NavForm({ item }) {
 
@@ -7,7 +8,7 @@ function NavForm({ item }) {
         <div className={cl.nav__column}>
             {
                 item.sections.map((item, index) =>
-                    <Link key={item.id} className={index ? "" : cl.nav__firstLine} to={item.to}>
+                    <Link key={item.id} className={index ? "" : cl.nav__firstLine} to={item.to} onClick={() => AutoScroll()}>
                         {item.title}
                     </Link>
                 )
