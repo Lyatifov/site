@@ -6,12 +6,16 @@ const statesSlice = createSlice({
         isActiveMiniMenu: false,
         loading: true,
         error: null,
+        isActiveModal: false,
         // isMobileVersion: false
     },
 
     reducers: {
         toggleIsActiveMiniMenu(state, action) {
             state.isActiveMiniMenu = !state.isActiveMiniMenu
+        },
+        toggleIsActiveModal(state, action) {
+            state.isActiveModal = !state.isActiveModal
         },
 
         // toggleMobileVersion(state, action) {
@@ -53,7 +57,7 @@ const statesSlice = createSlice({
 
 })
 
-export const { toggleIsActiveMiniMenu, toggleMobileVersion } = statesSlice.actions
+export const { toggleIsActiveMiniMenu, toggleIsActiveModal } = statesSlice.actions
 
 export default statesSlice.reducer
 

@@ -1,0 +1,62 @@
+.__background {
+    display: none;
+}
+
+.__background_active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.__window_active {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 18px;
+    z-index: 3;
+    width: auto;
+    height: auto;
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.__window_active>div {
+    margin: 15px 0;
+}
+
+.__window {
+    display: none;
+}
+
+.__inputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.__inputWrapper>* {
+    margin: 2px 0;
+}
+
+.__inputWrapper>input {
+    border: 2px solid #004583;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.__inputWrapper>button {
+    border: 1px solid rgb(15, 15, 20);
+    background: #004583;
+    color: rgb(213, 213, 236);
+    border-radius: 5px;
+    padding: 15px 5px;
+    font-size: 18px;
+    font-weight: 500;
+}

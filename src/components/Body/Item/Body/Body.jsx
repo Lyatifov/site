@@ -1,9 +1,17 @@
 import cl from "./Body.module.css"
 import Button from "../../../UI/Button/Button"
+import { useDispatch } from "react-redux";
+import { toggleIsActiveModal } from "../../../../store/statesSlice";
 
 export default function ItemBody({ item }) {
 
     const data = item[0]
+    const dispatch = useDispatch()
+
+    function Active() {
+        dispatch(toggleIsActiveModal())
+    }
+
 
     return (
         <div className={cl.item}>
@@ -28,7 +36,7 @@ export default function ItemBody({ item }) {
                         <div className={cl.item__priceSum}>{data.price}</div>
                     </div>
                     <div className={cl.item__priceButtonWrapper}>
-                        <Button className={cl.item__priceButton}>Узнать цену</Button>
+                        <Button onClick={() => Active()} className={cl.item__priceButton}>Узнать цену</Button>
                     </div>
                 </div>
             </div>

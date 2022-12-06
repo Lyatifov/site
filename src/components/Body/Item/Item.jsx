@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import Information from "./Information/Information"
 import ItemBody from "./Body/Body"
+import ModalWindow from "./ModalWindow/ModalWindow"
 
 export default function Item() {
 
@@ -14,6 +15,7 @@ export default function Item() {
 
     return (
         <article className={cl.item}>
+            <ModalWindow />
             <ItemBody item={item} />
             <Information />
         </article>
