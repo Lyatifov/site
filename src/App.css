@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+body {
+  padding: 0 calc(20px - (100vw - 100%)) 0 0;
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   outline: none;
 }
-
-/* a {
-  color: black
-} */
 
 .App {
   text-align: center;
@@ -103,6 +103,7 @@
 }
 
 @media (max-width: 750px) {
+
   .swiper-button-next,
   .swiper-button-prev {
     visibility: hidden;
