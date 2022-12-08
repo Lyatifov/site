@@ -8,7 +8,6 @@ import img_2 from "../img/icon/presentation/dignity_icon_2.png"
 import img_3 from "../img/icon/presentation/dignity_icon_3.png"
 import img_4 from "../img/icon/presentation/dignity_icon_4.png"
 import img_5 from "../img/icon/presentation/dignity_icon_5.png"
-import Button from "../components/UI/Button/Button"
 
 import icon_1 from "../img/icon/header/icon_1.png"
 import icon_2 from "../img/icon/header/icon_2.png"
