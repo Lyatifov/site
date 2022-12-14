@@ -5,27 +5,26 @@ export const newRequest = createAsyncThunk(
     "request/newRequest",
     async function (data, { rejectWithValue, dispatch }) {
 
-        // if (!data.phone.trim()) return rejectWithValue("Input has empty!")
+        axios({
+            method: "POST",
+            url: `http://localhost:3002/api/callme`,
+            headers: {
+                "Content-Type": "application/json",
+                "charset": "utf-8"
+            },
+            data: data
+        })
 
-        try {
-            const response = await axios({
-                method: "POST",
-                url: `https://jsonplaceholder.typicode.com/todos`,
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
+            .then(function (response) {
+                if (response.status === 202) {
+                    console.log("ОК")
+                }
             })
-
-
-            if (response.status !== 201) {
-                throw new Error("Server Error")
-            }
-
-        } catch (error) {
-            return rejectWithValue(error.message)
-        }
+            .catch(function (error) {
+                return rejectWithValue(error.message)
+            })
     }
+
 )
 
 const requestSlice = createSlice({
@@ -53,7 +52,7 @@ const requestSlice = createSlice({
     // }
 })
 
-const { toggler } = requestSlice.actions
+// const { toggler } = requestSlice.actions
 
 export default requestSlice.reducer
 
