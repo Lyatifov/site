@@ -8,6 +8,7 @@ export default function Catalog() {
 
     const catalog = useSelector(state => state.catalog.catalog)
     const categories = useSelector(state => state.catalog.categories)
+    const loading = useSelector(state => state.catalog.loading)
 
     const [isTargetId, setIsTargetId] = useState(null)
 
@@ -20,15 +21,24 @@ export default function Catalog() {
     }
 
     return (
-        <div className={cl.catalog}>
-            <CatalogCategories categories={categories} />
-            <article className={cl.catalog__list}>
-                {
-                    catalog.map((item, index) =>
-                        <CatalogItem targetToggle={targetToggle} isTarget={item.id === isTargetId ? true : false} key={index * 12} item={item} />
-                    )
-                }
-            </article>
-        </div>
+        <>
+            {
+                loading ?
+                    <div>Loading...</div>
+                    :
+                    <>
+                        <div className={cl.catalog} >
+                            <CatalogCategories categories={categories} />
+                            <article className={cl.catalog__list}>
+                                {
+                                    catalog.map((item, index) =>
+                                        <CatalogItem targetToggle={targetToggle} isTarget={item.id === isTargetId ? true : false} key={index * 12} item={item} />
+                                    )
+                                }
+                            </article>
+                        </div>
+                    </>
+            }
+        </>
     )
 }

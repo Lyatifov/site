@@ -1,7 +1,3 @@
-.__background {
-    display: none;
-}
-
 .__background_active {
     position: fixed;
     width: 100%;
@@ -31,10 +27,6 @@
     margin: 15px 0;
 }
 
-.__window {
-    display: none;
-}
-
 .__inputWrapper {
     display: flex;
     flex-direction: column;
@@ -45,10 +37,24 @@
     margin: 2px 0;
 }
 
-.__inputWrapper>input {
+.__input_invalid {
+    border: 2px solid rgb(129, 6, 6);
+    box-shadow: 0 0 10px 2px rgb(129, 6, 6);
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.__input {
     border: 2px solid #004583;
     border-radius: 5px;
     padding: 2px 5px;
+}
+
+.__commentBox {
+    min-height: 60px;
+    padding: 2px 5px;
+    border: 2px solid #004583;
+    border-radius: 5px;
 }
 
 .__inputWrapper>button {

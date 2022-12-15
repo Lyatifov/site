@@ -1,0 +1,29 @@
+.__popUp {
+    position: fixed;
+    right: -100vw;
+    bottom: 8%;
+    width: auto;
+    height: auto;
+    background: white;
+    z-index: 5;
+    padding: 15px 50px 15px 20px;
+    box-sizing: border-box;
+    border-left: 15px solid #004583;
+    text-align: left;
+    display: flex;
+    transition-duration: 1s;
+}
+
+.__popUp_active {
+    right: 0;
+    width: auto;
+    transition-duration: 1s;
+}
+
+.__text {
+    margin: auto 0;
+    width: auto;
+    height: auto;
+    max-width: 450px;
+    overflow-wrap: break-word;
+}

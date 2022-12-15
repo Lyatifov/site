@@ -3,11 +3,13 @@ import { useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import Information from "./Information/Information"
 import ItemBody from "./Body/Body"
-import ModalWindow from "./ModalWindow/ModalWindow"
+import ModalWindow from "../../UI/ModalWindow/ModalWindow"
+
 
 export default function Item() {
 
     const catalog = useSelector(state => state.catalog.catalog)
+    const loading = useSelector(state => state.catalog.loading)
 
     const params = useParams()
 
@@ -15,9 +17,15 @@ export default function Item() {
 
     return (
         <article className={cl.item}>
-            <ModalWindow />
-            <ItemBody item={item} />
-            <Information />
+            {
+                loading ?
+                    <div>Loading...</div> :
+                    <>
+                        <ModalWindow item={item}/>
+                        <ItemBody item={item} />
+                        <Information />
+                    </>
+            }
         </article>
     )
 }
