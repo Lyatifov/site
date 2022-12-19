@@ -2,6 +2,7 @@ import Button from "../../../UI/Button/Button"
 import cl from "./CatalogItem.module.css"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import Loader from "../../../UI/Loader/Loader"
 
 
 export default function CatalogItem({ item, targetToggle, isTarget }) {
@@ -14,7 +15,7 @@ export default function CatalogItem({ item, targetToggle, isTarget }) {
         <>
             {
                 loading ?
-                    <div>Loading...</div>
+                    <Loader />
                     :
                     <>
                         <section >

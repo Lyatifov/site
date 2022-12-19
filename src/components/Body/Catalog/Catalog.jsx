@@ -3,6 +3,8 @@ import { useSelector } from "react-redux"
 import CatalogItem from "./Item/CatalogItem"
 import CatalogCategories from "./Categories/CatalogCategories"
 import { useState } from "react"
+import EmptyPage from "../../UI/EmptyPage/EmptyPage"
+import Loader from "../../UI/Loader/Loader"
 
 export default function Catalog() {
 
@@ -24,20 +26,22 @@ export default function Catalog() {
         <>
             {
                 loading ?
-                    <div>Loading...</div>
-                    :
-                    <>
-                        <div className={cl.catalog} >
-                            <CatalogCategories categories={categories} />
-                            <article className={cl.catalog__list}>
-                                {
-                                    catalog.map((item, index) =>
-                                        <CatalogItem targetToggle={targetToggle} isTarget={item.id === isTargetId ? true : false} key={index * 12} item={item} />
-                                    )
-                                }
-                            </article>
-                        </div>
-                    </>
+                    <Loader />
+                    : catalog.length ?
+                        <>
+
+                            <div className={cl.catalog} >
+                                <CatalogCategories categories={categories} />
+                                <article className={cl.catalog__list}>
+                                    {
+                                        catalog.map((item, index) =>
+                                            <CatalogItem targetToggle={targetToggle} isTarget={item.id === isTargetId ? true : false} key={index * 12} item={item} />
+                                        )
+                                    }
+                                </article>
+                            </div>
+                        </> :
+                        <EmptyPage />
             }
         </>
     )

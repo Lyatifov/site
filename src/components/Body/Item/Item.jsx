@@ -3,8 +3,6 @@ import { useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import Information from "./Information/Information"
 import ItemBody from "./Body/Body"
-import ModalWindow from "../../UI/ModalWindow/ModalWindow"
-
 
 export default function Item() {
 
@@ -21,7 +19,6 @@ export default function Item() {
                 loading ?
                     <div>Loading...</div> :
                     <>
-                        <ModalWindow item={item}/>
                         <ItemBody item={item} />
                         <Information />
                     </>

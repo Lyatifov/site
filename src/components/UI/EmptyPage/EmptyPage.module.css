@@ -1,0 +1,22 @@
+._body{
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 799px) {
+    ._body{
+        min-height: 250px;
+    }
+}
+
+@media (min-width: 800px) {
+    ._body{
+        min-height: 500px;
+    }
+}
+
+._body>h1{
+    margin: auto;
+}

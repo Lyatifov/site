@@ -1,7 +1,7 @@
 import cl from "./Body.module.css"
 import Button from "../../../UI/Button/Button"
 import { useDispatch } from "react-redux";
-import { toggleIsActiveModal } from "../../../../store/statesSlice";
+import { toggleIsActiveModal, addModalProps } from "../../../../store/statesSlice";
 
 export default function ItemBody({ item }) {
 
@@ -9,6 +9,8 @@ export default function ItemBody({ item }) {
     const dispatch = useDispatch()
 
     function Active() {
+        console.log(item);
+        dispatch(addModalProps(item))
         dispatch(toggleIsActiveModal())
     }
 

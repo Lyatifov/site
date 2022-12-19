@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { newRequest } from "../../../store/requestSlice"
-import { toggleIsActiveModal, toggleIsisActivePopUp } from "../../../store/statesSlice"
+import { toggleIsActiveModal, toggleIsisActivePopUp, addModalData } from "../../../store/statesSlice"
 import { EmailValidator, PhoneValidator } from "../../Validator/Validator"
-import PopUp from "../PopUp/PopUp"
 import cl from "./ModalWindow.module.css"
 
-export default function ModalWindow({ item }) {
+export default function ModalWindow() {
 
     const isActiveModal = useSelector(state => state.states.isActiveModal)
+    const modalData = useSelector(state => state.states.modalData)
+    const modalProps = useSelector(state => state.states.modalProps)
     const mainInfo = useSelector(state => state.information.mainInfo)
     const isActivePopUp = useSelector(state => state.states.isActivePopUp)
 
@@ -32,14 +33,6 @@ export default function ModalWindow({ item }) {
         }
     }
 
-
-    const [data, setData] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        comments: ''
-    })
-
     const [valid, setValid] = useState({
         phone: true,
         email: true
@@ -47,21 +40,21 @@ export default function ModalWindow({ item }) {
 
     function CheckValid() {
         setValid({
-            phone: PhoneValidator(data.phone),
-            email: EmailValidator(data.email)
+            phone: PhoneValidator(modalData.phone),
+            email: EmailValidator(modalData.email)
         })
 
-        return PhoneValidator(data.phone) || EmailValidator(data.email)
+        return PhoneValidator(modalData.phone) || EmailValidator(modalData.email)
     }
 
     useEffect(() => {
-        if (item) {
-            setData({
-                ...data,
-                comments: `Меня интересует ${item[0].title}.\n`
-            })
+
+        console.log(modalProps ? true : false)
+
+        if (modalProps[0]) {
+            dispatch(addModalData({ comments: `Меня интересует ${modalProps[0].title}.\n` }))
         }
-    }, [])
+    }, [modalProps])
 
     return (
         <>
@@ -75,6 +68,15 @@ export default function ModalWindow({ item }) {
                         <div
                             onClick={(e) => e.stopPropagation()}
                             className={cl.__window_active}>
+                            <div className={cl._closeWrapper}>
+                                <div className={cl._closeButton}
+                                    onClick={() => Active()}>
+                                    <div className={cl._icon}>
+                                        <div className={cl._close_1}></div>
+                                        <div className={cl._close_2}></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div>
                                 <p>
                                     Вы можете позвонить нам по следующим номерам:
@@ -90,14 +92,20 @@ export default function ModalWindow({ item }) {
                             </div>
                             <div className={cl.__inputWrapper}>
                                 <p> Оставить свой номер/почту и наш менедже с Вами свяжиться. </p>
-                                <input className={cl.__input} type="text" placeholder="Ваше имя" value={data.name} onChange={e => setData({ ...data, name: e.target.value })} />
-                                <input className={!valid.phone ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш номер телефона" value={data.phone} onChange={e => setData({ ...data, phone: e.target.value })} />
-                                <input className={!valid.email ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш адрес электронной почты" value={data.email} onChange={e => setData({ ...data, email: e.target.value })} />
-                                <textarea className={cl.__commentBox} type="text" placeholder="Ваши комментарии" value={data.comments} onChange={e => setData({ ...data, comments: e.target.value })} />
-                                <button onClick={() => Active(data)}>Отправить</button>
+                                <input className={cl.__input} type="text" placeholder="Ваше имя"
+                                    value={modalData.name} onChange={e => dispatch(addModalData({ name: e.target.value }))} />
+
+                                <input className={!valid.phone ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш номер телефона"
+                                    value={modalData.phone} onChange={e => dispatch(addModalData({ phone: e.target.value }))} />
+
+                                <input className={!valid.email ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш адрес электронной почты"
+                                    value={modalData.email} onChange={e => dispatch(addModalData({ email: e.target.value }))} />
+
+                                <textarea className={cl.__commentBox} type="text" placeholder="Ваши комментарии"
+                                    value={modalData.comments} onChange={e => dispatch(addModalData({ comments: e.target.value }))} />
+                                <button onClick={() => Active(modalData)}>Отправить</button>
                             </div>
                         </div>
-                        <PopUp text="Чтобы с Вами связаться нам необходимы Ваши контактнные данных. Нам подойдет Ваш номер телефона или адрес электронной почты."/>
                     </> :
                     <>
                     </>
