@@ -48,9 +48,6 @@ export default function ModalWindow() {
     }
 
     useEffect(() => {
-
-        console.log(modalProps ? true : false)
-
         if (modalProps[0]) {
             dispatch(addModalData({ comments: `Меня интересует ${modalProps[0].title}.\n` }))
         }

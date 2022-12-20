@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
 
-const img_1 = "https://moscow.okmebell.ru/image/cache/catalog/Stenki/1544370488_67-kopiya-1500x1000.jpg",
-    img_2 = "https://moscow.okmebell.ru/image/cache/catalog/Stenki/1544370488_67-kopiya-1500x1000.jpg",
-    img_3 = "https://moscow.okmebell.ru/image/cache/catalog/Stenki/1544370488_67-kopiya-1500x1000.jpg"
+const img_1 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/35.jpg",
+    img_2 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/35.jpg",
+    img_3 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/35.jpg"
 
 
 const data = {
@@ -271,8 +271,8 @@ const catalogSlice = createSlice({
         },
         [requestCatalog.fulfilled]: (state, action) => {
             state.loading = false
-            state.catalog = action.payload.catalog
-            state.categories = action.payload.categories
+            state.catalog = action.payload.catalog || data.catalog
+            state.categories = action.payload.categories || data.categories
         },
         [requestCatalog.rejected]: (state, action) => {
             state.loading = false

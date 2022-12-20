@@ -6,9 +6,8 @@
     border-radius: 8px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     .aside {
-        visibility: hidden;
-        width: 0;
+        display: none;
     }
 }

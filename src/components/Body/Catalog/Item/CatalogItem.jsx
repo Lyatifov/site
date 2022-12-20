@@ -18,28 +18,28 @@ export default function CatalogItem({ item, targetToggle, isTarget }) {
                     <Loader />
                     :
                     <>
-                        <section >
-                            <div id={item.id} className={cl.catalog__itemWrapper}>
-                                <div onClick={() => targetToggle(item.id)} className={isTarget ? cl.catalog__item + " " + cl.catalog__item_target : cl.catalog__item}>
-                                    <div className={isTarget ? cl.catalog__itemImg + " " + cl.catalog__itemImg_target : cl.catalog__itemImg}>
-                                        <img src={item.img} />
+                        <section className={cl.section}>
+                            <div id={item.id} className={cl.wrapper}>
+                                <div onClick={() => targetToggle(item.id)} className={`${cl.item} ${isTarget ? cl.item_target : ""}`}>
+                                    <div className={`${cl.imgWrapper} ${isTarget ? cl.imgWrapper_target : ""}`} >
+                                        <img className={cl.img} src={item.img} />
                                     </div>
-                                    <div className={isTarget ? cl.catalog__itemTitle + " " + cl.catalog__itemTitle_target : cl.catalog__itemTitle}>
-                                        {item.title}
-                                    </div>
-                                    <div>
-                                        {item.description}
-                                    </div>
-                                    <div>
-                                        {item.availability}
-                                    </div>
-                                    <div className={isTarget ? cl.catalog__itemPrice + " " + cl.catalog__itemPrice_target : cl.catalog__itemPrice}>
-                                        {item.price}
-                                    </div>
-                                    <div className={isTarget ? cl.catalogItem__buttonWrapper_target : cl.catalogItem__buttonWrapper}>
+                                    <div className={cl.textWrapper}>
+                                        <div className={`${cl.title} ${isTarget ? cl.title_target : ""}`}>
+                                            {item.title}
+                                        </div>
+                                        <div className={`${cl.text} ${isTarget ? cl.text_target : ""}`}>
+                                            {item.description}
+                                        </div>
+                                        <div className={`${cl.text} ${isTarget ? cl.text_target : ""}`}>
+                                            {item.availability}
+                                        </div>
+                                        <div className={`${cl.price} ${isTarget ? cl.price_target : ""}`}>
+                                            {item.price}
+                                        </div>
                                         <Button
                                             onClick={() => navigate(`/item/${item.id}`)}
-                                            className={isTarget ? cl.catalogItem__button + " " + cl.catalogItem__button_target : cl.catalogItem__button}
+                                            className={isTarget ? cl.button_target : cl.button_hidden}
                                         >
                                             Подробнее
                                         </Button>
