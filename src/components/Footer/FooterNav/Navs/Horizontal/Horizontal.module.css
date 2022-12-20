@@ -19,6 +19,10 @@
     color: #071828;
 }
 
+.nav__item >a {
+    color: black;
+}
+
 .nav__firstLine {
     font-weight: 700;
     font-size: 16px;

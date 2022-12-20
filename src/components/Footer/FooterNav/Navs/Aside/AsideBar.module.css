@@ -1,13 +1,15 @@
 .aside {
-    display: flex;
-    flex-direction: column;
     font-weight: 700;
     font-size: 16px;
     line-height: 35px;
     box-sizing: border-box;
+    /* text-align: center; */
+}
 
-    text-align: center;
-    letter-spacing: -0.5px;
+.aside>li {
+    padding: 12px;
+    width: 200px;
+    height: 35px;
 }
 
 .aside_border {
@@ -18,17 +20,17 @@
     color: #004583;
 }
 
-.aside>div {
-    width: 200px;
-    padding: 12px;
-}
-
 @media (max-width: 799px) {
     .aside {
         padding-top: 20px;
         padding-bottom: 30px;
         font-size: 13px;
         line-height: 28px;
+        width: 100%;
+    }
+
+    .aside>li {
+        width: 100%;
     }
 
     .aside>div {

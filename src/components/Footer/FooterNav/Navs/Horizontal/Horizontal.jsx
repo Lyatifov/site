@@ -5,15 +5,17 @@ import AutoScroll from "../../../../AutoScroll/AutoScroll"
 function NavForm({ item }) {
 
     return (
-        <div className={cl.nav__column}>
+        <ul className={cl.nav__column}>
             {
                 item.sections.map((item, index) =>
-                    <Link key={item.id} className={index ? "" : cl.nav__firstLine} to={item.to} onClick={() => AutoScroll()}>
-                        {item.title}
-                    </Link>
+                    <li className={`${cl.nav__item} ${index ? "" : cl.nav__firstLine}`}>
+                        <Link key={item.id} to={item.to} onClick={() => AutoScroll()}>
+                            {item.title}
+                        </Link>
+                    </li>
                 )
             }
-        </div>
+        </ul>
     )
 }
 
@@ -22,12 +24,12 @@ function NavForm({ item }) {
 
 export default function Horizontal({ data }) {
     return (
-        <div className={cl.nav}>
+        <saction className={cl.nav}>
             {
                 data.map((item) => {
                     return <NavForm key={item.id} item={item} />
                 })
             }
-        </div>
+        </saction>
     )
 }

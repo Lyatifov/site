@@ -4,24 +4,53 @@ import { Link } from 'react-router-dom'
 
 export default function NavBar() {
 
+    const data = [
+        {
+            title: "Каталог",
+            to: '/catalog',
+            className: cl.nav__item,
+            extraClass: cl.nav__item_redText
+        },
+        {
+            title: "О нас",
+            to: '/info',
+            className: cl.nav__item,
+            extraClass: ""
+        },
+        {
+            title: "3D - моделирование",
+            to: '/about',
+            className: cl.nav__item,
+            extraClass: ""
+        },
+        {
+            title: "Покупателю",
+            to: '/about',
+            className: cl.nav__item,
+            extraClass: ""
+        },
+        {
+            title: "Доставка и оплата",
+            to: '/about',
+            className: cl.nav__item,
+            extraClass: ""
+        },
+    ]
+
     return (
         <nav className={cl.nav}>
 
-            <div className={cl.nav__item + ' ' + cl.nav__item_redText}>
-                <Link to='/catalog'>Каталог</Link>
-            </div>
-            <div className={cl.nav__item}>
-                <Link to='/info'>О нас</Link>
-            </div>
-            <div className={cl.nav__item}>
-                <Link to='/about'>3D - моделирование</Link>
-            </div>
-            <div className={cl.nav__item}>
-                <Link to='/about'>Покупателю</Link>
-            </div>
-            <div className={cl.nav__item}>
-                <Link to='/about'>Доставка и оплата</Link>
-            </div>
+            <ul className={cl.wrapper}>
+                {
+                    data.map(item =>
+                        <li className={`${item.className} ${item.extraClass}`}>
+                            <Link to={item.to}>{item.title}</Link>
+                        </li>
+                    )
+                }
+            </ul>
+
+
 
             <div className={cl.nav__inputWrapper}>
                 <div className={cl.nav__inputDecoration}>
