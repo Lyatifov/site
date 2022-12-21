@@ -1,11 +1,15 @@
 import cl from "./EmptyPage.module.css"
 
 
-export default function EmptyPage() {
+export default function EmptyPage(payload) {
     return (
         <div className={cl._body}>
             <h1>
-                Тут пусто =(
+                {
+                    payload ?
+                        payload.children :
+                        ""
+                }
             </h1>
         </div>
     )

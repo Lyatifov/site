@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { newRequest } from "../../../store/requestSlice"
 import { toggleIsActiveModal, toggleIsisActivePopUp, addModalData } from "../../../store/statesSlice"
-import { EmailValidator, PhoneValidator } from "../../Validator/Validator"
+import { EmailValidator, PhoneValidator } from "../../../core/services/validator/validator"
 import cl from "./ModalWindow.module.css"
 
 export default function ModalWindow() {
@@ -12,8 +12,11 @@ export default function ModalWindow() {
     const modalProps = useSelector(state => state.states.modalProps)
     const mainInfo = useSelector(state => state.information.mainInfo)
     const isActivePopUp = useSelector(state => state.states.isActivePopUp)
-
     const dispatch = useDispatch()
+    const [valid, setValid] = useState({
+        phone: true,
+        email: true
+    })
 
     function Active(itemData) {
         if (itemData) {
@@ -33,17 +36,11 @@ export default function ModalWindow() {
         }
     }
 
-    const [valid, setValid] = useState({
-        phone: true,
-        email: true
-    })
-
     function CheckValid() {
         setValid({
             phone: PhoneValidator(modalData.phone),
             email: EmailValidator(modalData.email)
         })
-
         return PhoneValidator(modalData.phone) || EmailValidator(modalData.email)
     }
 
@@ -91,13 +88,10 @@ export default function ModalWindow() {
                                 <p> Оставить свой номер/почту и наш менедже с Вами свяжиться. </p>
                                 <input className={cl.__input} type="text" placeholder="Ваше имя"
                                     value={modalData.name} onChange={e => dispatch(addModalData({ name: e.target.value }))} />
-
                                 <input className={!valid.phone ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш номер телефона"
                                     value={modalData.phone} onChange={e => dispatch(addModalData({ phone: e.target.value }))} />
-
                                 <input className={!valid.email ? cl.__input_invalid : cl.__input} type="text" placeholder="Ваш адрес электронной почты"
                                     value={modalData.email} onChange={e => dispatch(addModalData({ email: e.target.value }))} />
-
                                 <textarea className={cl.__commentBox} type="text" placeholder="Ваши комментарии"
                                     value={modalData.comments} onChange={e => dispatch(addModalData({ comments: e.target.value }))} />
                                 <button onClick={() => Active(modalData)}>Отправить</button>

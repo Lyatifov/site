@@ -21,10 +21,12 @@
     flex-direction: column;
     width: 100%;
     background: #BB2822;
+    padding: 0 5px;
 }
 
 .nav__item {
     margin: auto auto;
+    display: flex;
 }
 
 .nav__item>a {
@@ -38,13 +40,21 @@
 .nav__search {
     border: none;
     background: none;
-    width: 80%;
+    width: 100%;
     height: 15px;
     margin-right: 5px;
+    color: white;
+    padding: 5px;
 }
 
 .nav__search::placeholder,
 .nav__search:focus {
     color: white;
     font-family: 'Inter', sans-serif;
+}
+
+.nav__icon {
+    margin: auto;
+    width: 18px;
+    height: 18px;
 }

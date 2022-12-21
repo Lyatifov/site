@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import AutoScroll from "../../../../AutoScroll/AutoScroll"
+import AutoScroll from "../../../../../core/services/autoScroll/autoScroll"
 import cl from "./AsideBar.module.css"
 
 export default function AsideBar({ data }) {

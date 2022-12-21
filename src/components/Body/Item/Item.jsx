@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import Information from "./Information/Information"
 import ItemBody from "./Body/Body"
+import Loader from "../../UI/Loader/Loader"
 
 export default function Item() {
 
@@ -17,7 +18,7 @@ export default function Item() {
         <article className={cl.item}>
             {
                 loading ?
-                    <div>Loading...</div> :
+                    <Loader /> :
                     <>
                         <ItemBody item={item} />
                         <Information />

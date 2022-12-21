@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import PublicRoutes from "../routers/routers"
+import PublicRoutes from "../../routers/routers"
 import ConstPopUp from "../UI/ConstPopUp/ConstPopUp"
 import ModalWindow from "../UI/ModalWindow/ModalWindow"
 import PopUp from "../UI/PopUp/PopUp"

@@ -3,7 +3,6 @@
     font-size: 16px;
     line-height: 35px;
     box-sizing: border-box;
-    /* text-align: center; */
 }
 
 .aside>li {
@@ -26,14 +25,10 @@
         padding-bottom: 30px;
         font-size: 13px;
         line-height: 28px;
-        width: 100%;
+        width: auto;
     }
 
     .aside>li {
-        width: 100%;
-    }
-
-    .aside>div {
         width: auto;
     }
 }

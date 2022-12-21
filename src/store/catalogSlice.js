@@ -5,7 +5,6 @@ const img_1 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/
     img_2 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/35.jpg",
     img_3 = "https://static.tildacdn.com/tild6539-6538-4937-b134-633732316539/35.jpg"
 
-
 const data = {
     catalog: [
         {
@@ -238,8 +237,6 @@ const data = {
     ],
 }
 
-
-
 export const requestCatalog = createAsyncThunk(
     "catalog/requestCatalog",
     async function (_, { rejectWithValue }) {
@@ -252,18 +249,19 @@ export const requestCatalog = createAsyncThunk(
     }
 )
 
-
-
 const catalogSlice = createSlice({
     name: "catalog",
     initialState: {
         catalog: data.catalog,
+        tempСatalog: [],
         categories: data.categories,
         loading: true,
         error: null
     },
     reducers: {
-
+        setTempСatalog(state, action) {
+            state.tempСatalog = [...action.payload]
+        }
     },
     extraReducers: {
         [requestCatalog.pending]: (state, action) => {
@@ -281,7 +279,7 @@ const catalogSlice = createSlice({
     }
 })
 
-// const { upload } = catalogSlice.actions
+export const { setTempСatalog } = catalogSlice.actions
 
 export default catalogSlice.reducer
 
