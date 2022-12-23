@@ -9,122 +9,122 @@ const data = {
     catalog: [
         {
             id: 401,
-            title: 'Мелисса композиция 1',
+            title: 'Спальни Мелисса композиция 1',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '60 658 ₽',
             img: img_1,
         },
         {
             id: 402,
-            title: 'Мелисса композиция 2',
+            title: 'Спальни Мелисса композиция 2',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '70 658 ₽',
             img: img_2,
         },
         {
             id: 403,
-            title: 'Мелисса композиция 3',
+            title: 'Спальни Мелисса композиция 3',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '80 658 ₽',
             img: img_3,
         },
         {
             id: 404,
-            title: 'Мелисса композиция 4',
+            title: 'Гостинные Мелисса композиция 4',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '40 658 ₽',
             img: img_1,
         },
         {
             id: 405,
-            title: 'Мелисса композиция 5',
+            title: 'Детские Мелисса композиция 5',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '30 658 ₽',
             img: img_2,
         },
         {
             id: 406,
-            title: 'Мелисса композиция 6',
+            title: 'Детские Гостинные Мелисса композиция 6',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '20 658 ₽',
             img: img_3,
         },
         {
             id: 407,
-            title: 'Мелисса композиция 7',
+            title: 'Детские Гостинные Мелисса композиция 7',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '10 658 ₽',
             img: img_1,
         },
         {
             id: 408,
-            title: 'Мелисса композиция 8',
+            title: 'Прихожие Мелисса композиция 8',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '14 658 ₽',
             img: img_2,
         },
         {
             id: 409,
-            title: 'Мелисса композиция 9',
+            title: 'Кровати Мелисса композиция 9',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '100 658 ₽',
             img: img_3,
         },
         {
             id: 410,
-            title: 'Мелисса композиция 10',
+            title: 'Новинка Мелисса композиция 10',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '110 658 ₽',
             img: img_1,
         },
         {
             id: 411,
-            title: 'Мелисса композиция 11',
+            title: 'Прихожие Мелисса композиция 11',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '120 658 ₽',
             img: img_2,
         },
         {
             id: 412,
-            title: 'Мелисса композиция 12',
+            title: 'Кровати Мелисса композиция 12',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '130 658 ₽',
             img: img_3,
         },
         {
             id: 413,
-            title: 'Мелисса композиция 13',
+            title: 'Новинка Кровати Мелисса композиция 13',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '140 658 ₽',
             img: img_1,
         },
         {
             id: 414,
-            title: 'Мелисса композиция 14',
+            title: 'Кровати Мелисса композиция 14',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '150 658 ₽',
             img: img_2,
         },
         {
             id: 415,
-            title: 'Мелисса композиция 15',
+            title: 'Новинка Мелисса композиция 15',
             description: 'в 1462    ш 360     г 352',
             availability: 'Объем: 12м3',
-            price: '59 658 ₽',
+            price: '160 658 ₽',
             img: img_3,
         },
     ],
@@ -135,12 +135,15 @@ const data = {
             subcategories: [
                 {
                     title: "Новинка1",
+                    to: `/catalog/Новинка`
                 },
                 {
                     title: "Новинка2",
+                    to: `/catalog/Новинка`
                 },
                 {
                     title: "Новинка3",
+                    to: `/catalog/Новинка`
                 },
             ]
         },
@@ -150,12 +153,15 @@ const data = {
             subcategories: [
                 {
                     title: "Гостинные1",
+                    to: `/catalog/Гостинные`
                 },
                 {
                     title: "Гостинные2",
+                    to: `/catalog/Гостинные`
                 },
                 {
                     title: "Гостинные3",
+                    to: `/catalog/Гостинные`
                 },
             ]
         },
@@ -165,12 +171,15 @@ const data = {
             subcategories: [
                 {
                     title: "Прихожие1",
+                    to: `/catalog/Прихожие`
                 },
                 {
                     title: "Прихожие2",
+                    to: `/catalog/Прихожие`
                 },
                 {
                     title: "Прихожие3",
+                    to: `/catalog/Прихожие`
                 },
             ]
         },
@@ -179,13 +188,16 @@ const data = {
             title: "Спальни",
             subcategories: [
                 {
-                    title: "Спальни1",
+                    title: "Спальни",
+                    to: `/catalog/Спальни`
                 },
                 {
-                    title: "Спальни2",
+                    title: "Спальни",
+                    to: `/catalog/Спальни`
                 },
                 {
-                    title: "Спальни3",
+                    title: "Спальни",
+                    to: `/catalog/Спальни`
                 },
             ]
         },
@@ -195,12 +207,15 @@ const data = {
             subcategories: [
                 {
                     title: "Детские1",
+                    to: `/catalog/Детские`
                 },
                 {
                     title: "Детские2",
+                    to: `/catalog/Детские`
                 },
                 {
                     title: "Детские3",
+                    to: `/catalog/Детские`
                 },
             ]
         },
@@ -209,31 +224,19 @@ const data = {
             title: "Кровати",
             subcategories: [
                 {
-                    title: "Кровати1",
+                    title: "Кровати",
+                    to: `/catalog/Кровати`
                 },
                 {
-                    title: "Кровати2",
+                    title: "Кровати",
+                    to: `/catalog/Кровати`
                 },
                 {
-                    title: "Кровати3",
+                    title: "Кровати",
+                    to: `/catalog/Кровати`
                 },
             ]
-        },
-        {
-            id: 507,
-            title: "Матрасы",
-            subcategories: [
-                {
-                    title: "Матрасы1",
-                },
-                {
-                    title: "Матрасы2",
-                },
-                {
-                    title: "Матрасы3",
-                },
-            ]
-        },
+        }
     ],
 }
 

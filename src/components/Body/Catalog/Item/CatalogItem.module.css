@@ -12,6 +12,7 @@
     border-radius: 10px;
     position: relative;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .item {
@@ -21,9 +22,16 @@
     height: 100%;
 }
 
-.item_target {
+.targetItem_active {
+    z-index: 3;
     height: auto;
     border-radius: 10px;
+    position: absolute;
+    background: white;
+}
+
+.targetItem_deactive {
+    display: none;
 }
 
 .imgWrapper {
@@ -40,6 +48,7 @@
 
 .textWrapper {
     padding: 10px 5px;
+    box-sizing: border-box;
 }
 
 .textWrapper>div {
@@ -86,6 +95,7 @@
     font-size: 21px;
 }
 
+.button,
 .button_target {
     padding: 14px 22px;
     border-radius: 5px;
@@ -101,7 +111,7 @@
 
 
 @media (min-width: 651px) {
-    .item_target {
+    .targetItem_active {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -45%);
@@ -109,14 +119,14 @@
     }
 
     .wrapper {
-        max-height: 310px;
+        max-height: 350px;
         min-height: 250px;
     }
 
 }
 
 @media (max-width: 650px) and (min-width: 551px) {
-    .item_target {
+    .targetItem_active {
         transform: translate(-5.5%, -5%);
         width: calc(100% + 30px);
 
@@ -128,7 +138,7 @@
 }
 
 @media (max-width: 550px) and (min-width: 451px) {
-    .item_target {
+    .targetItem_active {
         transform: translate(-5.5%, -5%);
         width: calc(100% + 30px);
 
@@ -140,14 +150,14 @@
 }
 
 @media (min-width: 451px) {
-    .item_target {
+    .targetItem_active {
         background-color: white;
         position: absolute;
         z-index: 2;
         box-shadow: 0px 10px 52px -8px rgba(0, 0, 0, 0.3);
     }
 
-    .button_hidden {
+    .button {
         display: none;
     }
 
@@ -165,7 +175,7 @@
 @media (max-width: 450px) {
 
     .item,
-    .item_target {
+    .targetItem_active {
         max-width: 408px;
         box-sizing: border-box;
         width: 100%;
@@ -193,7 +203,7 @@
     }
 
     .button_target,
-    .button_hidden {
+    .button {
         padding: 14px 22px;
         border-radius: 5px;
         border: none;

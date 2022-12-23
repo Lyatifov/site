@@ -20,7 +20,7 @@ export default function CatalogItem({ item, targetToggle, isTarget }) {
                     <>
                         <section className={cl.section}>
                             <div id={item.id} className={cl.wrapper}>
-                                <div onClick={() => targetToggle(item.id)} className={`${cl.item} ${isTarget ? cl.item_target : ""}`}>
+                                <div onClick={() => targetToggle(item.id)} className={`${cl.item} ${isTarget ? cl.targetItem_active : cl.targetItem_deactive}`}>
                                     <div className={`${cl.imgWrapper} ${isTarget ? cl.imgWrapper_target : ""}`} >
                                         <img className={cl.img} src={item.img} />
                                     </div>
@@ -39,7 +39,32 @@ export default function CatalogItem({ item, targetToggle, isTarget }) {
                                         </div>
                                         <Button
                                             onClick={() => navigate(`/item/${item.id}`)}
-                                            className={isTarget ? cl.button_target : cl.button_hidden}
+                                            className={cl.button_target}
+                                        >
+                                            Подробнее
+                                        </Button>
+                                    </div>
+                                </div>
+                                <div onClick={() => targetToggle(item.id)} className={`${cl.item}`}>
+                                    <div className={`${cl.imgWrapper}`} >
+                                        <img className={cl.img} src={item.img} />
+                                    </div>
+                                    <div className={cl.textWrapper}>
+                                        <div className={`${cl.title}`}>
+                                            {item.title}
+                                        </div>
+                                        <div className={`${cl.text}`}>
+                                            {item.description}
+                                        </div>
+                                        <div className={`${cl.text}`}>
+                                            {item.availability}
+                                        </div>
+                                        <div className={`${cl.price}`}>
+                                            {item.price}
+                                        </div>
+                                        <Button
+                                            onClick={() => navigate(`/item/${item.id}`)}
+                                            className={cl.button}
                                         >
                                             Подробнее
                                         </Button>

@@ -6,15 +6,18 @@
 
 .catalog__list {
     display: grid;
-    grid-template-columns: auto auto auto;
-    width: 100%;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 350px;
+    row-gap: 20px;
+    align-content: space-around;
+    width: auto;
     max-width: 930px;
-
     margin-left: 30px;
     background: #FFFFFF;
     border: 1px solid #EFEFEF;
     box-shadow: 0px 10px 52px -8px rgba(0, 0, 0, 0.17);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .catalog__list_empty {
@@ -28,7 +31,6 @@
         grid-template-columns: auto auto;
         width: 100%;
         max-width: 799px;
-
         margin-left: 20px;
     }
 }

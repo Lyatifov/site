@@ -11,7 +11,6 @@ import { useEffect } from "react"
 import { setTempСatalog } from "../../../store/catalogSlice"
 
 export default function Catalog() {
-
     const dispatch = useDispatch()
     const catalog = useSelector(state => state.catalog.catalog)
     const tempСatalog = useSelector(state => state.catalog.tempСatalog)
@@ -26,14 +25,11 @@ export default function Catalog() {
             setIsTargetId(id)
         }
     }
-
     useEffect(() => {
         if (params.params) {
             dispatch(setTempСatalog(SearchItem(catalog, params.params)))
-            console.log(tempСatalog.length)
         }
     }, [params.params])
-
     return (
         <>
             {
@@ -43,28 +39,30 @@ export default function Catalog() {
                         <>
                             <div className={cl.catalog} >
                                 <CatalogCategories categories={categories} />
-                                <article className={params.params && !tempСatalog.length ? `${cl.catalog__list} ${cl.catalog__list_empty}` : cl.catalog__list}>
-                                    {
-                                        params.params ?
-                                            tempСatalog.length ?
-                                                tempСatalog.map((item, index) =>
+                                <main>
+                                    <article className={params.params && !tempСatalog.length ? `${cl.catalog__list} ${cl.catalog__list_empty}` : cl.catalog__list}>
+                                        {
+                                            params.params ?
+                                                tempСatalog.length ?
+                                                    tempСatalog.map((item, index) =>
+                                                        <CatalogItem
+                                                            targetToggle={targetToggle}
+                                                            isTarget={item.id === isTargetId ? true : false}
+                                                            key={index}
+                                                            item={item} />
+                                                    ) :
+                                                    <EmptyPage>По вашему запосу ничего не найдено =(</EmptyPage>
+                                                :
+                                                catalog.map((item, index) =>
                                                     <CatalogItem
                                                         targetToggle={targetToggle}
                                                         isTarget={item.id === isTargetId ? true : false}
                                                         key={index}
                                                         item={item} />
-                                                ) :
-                                                <EmptyPage>По вашему запосу ничего не найдено =(</EmptyPage>
-                                            :
-                                            catalog.map((item, index) =>
-                                                <CatalogItem
-                                                    targetToggle={targetToggle}
-                                                    isTarget={item.id === isTargetId ? true : false}
-                                                    key={index}
-                                                    item={item} />
-                                            )
-                                    }
-                                </article>
+                                                )
+                                        }
+                                    </article>
+                                </main>
                             </div>
                         </> :
                         <EmptyPage />
