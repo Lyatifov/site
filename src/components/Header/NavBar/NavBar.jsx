@@ -1,8 +1,9 @@
 import cl from "./NavBar.module.css"
 import icon from "../../../img/icon/nav/icon.png"
 import { Link } from "react-router-dom"
-import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { updateSearchInput } from "../../../store/statesSlice"
 
 export default function NavBar() {
     const data = [
@@ -37,11 +38,11 @@ export default function NavBar() {
             extraClass: ""
         },
     ]
-    const [input, setInput] = useState("")
+    const input = useSelector(state => state.states.searchInput)
+    const dispatch = useDispatch()
     const navigate = useNavigate()
-    const inputField = document.getElementsByClassName(cl.nav__input)
     function enterPressed(e) {
-        if (e.code === "Enter") {
+        if (e.code === "Enter" || e.code === "NumpadEnter") {
             navigate(`/catalog/${input}`)
         }
     }
@@ -63,7 +64,7 @@ export default function NavBar() {
                         type="text"
                         placeholder="Поиск по сайту..."
                         value={input}
-                        onChange={e => setInput(e.target.value)}
+                        onChange={e => dispatch(updateSearchInput(e.target.value))}
                         onKeyUp={enterPressed.bind(this)} />
                     <div onClick={() => navigate(`/catalog/${input}`)}>
                         <img src={icon} alt="&#955;" />

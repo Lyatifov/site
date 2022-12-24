@@ -2,11 +2,18 @@ import cl from "./MiniNavBar.module.css"
 import icon from "./../../../../img/icon/nav/icon_alt.png"
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { updateSearchInput } from "../../../../store/statesSlice"
 
 export default function MiniNavBar() {
-    const [input, setInput] = useState("")
+    const input = useSelector(state => state.states.searchInput)
+    const dispatch = useDispatch()
     const navigate = useNavigate()
+    function enterPressed(e) {
+        if (e.key === "Enter") {
+            navigate(`/catalog/${input}`)
+        }
+    }
     return (
         <nav className={cl.nav}>
             <div className={cl.nav__itemWrapper}>
@@ -21,7 +28,8 @@ export default function MiniNavBar() {
                         placeholder="Поиск по сайту..."
                         type="text"
                         value={input}
-                        onChange={e => setInput(e.target.value)} />
+                        onChange={e => dispatch(updateSearchInput(e.target.value))}
+                        onKeyUp={enterPressed.bind(this)} />
                     <img className={cl.nav__icon} src={icon} onClick={() => navigate(`/catalog/${input}`)} />
                 </div>
             </div>

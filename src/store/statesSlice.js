@@ -12,7 +12,8 @@ const statesSlice = createSlice({
             name: '',
             phone: '',
             email: '',
-            comments: ''
+            comments: '',
+            searchInput: '',
         },
         modalProps: [],
         isActivePopUp: false
@@ -37,11 +38,14 @@ const statesSlice = createSlice({
         addModalProps(state, action) {
 
             state.modalProps = [...action.payload]
-        }
+        },
+        updateSearchInput(state, action) {
+            state.searchInput = action.payload
+        },
     },
 })
 
-export const { toggleIsActiveMiniMenu, toggleIsActiveModal, toggleIsisActivePopUp, addModalData, addModalProps } = statesSlice.actions
+export const { toggleIsActiveMiniMenu, toggleIsActiveModal, toggleIsisActivePopUp, addModalData, addModalProps, updateSearchInput } = statesSlice.actions
 
 export default statesSlice.reducer
 
