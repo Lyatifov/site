@@ -1,3 +1,4 @@
+import React from "react";
 import FooterNav from "./FooterNav/FooterNav";
 import cl from "./Footer.module.css";
 import logo from "./../../img/logo.png";

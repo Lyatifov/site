@@ -13,7 +13,6 @@
     position: absolute;
     left: 24px;
     top: 57px;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -23,11 +22,14 @@
 
 .footer__logo {
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__logo > img {
     width: 173px;
     height: 86px;
+    margin: auto;
 }
 
 @media (max-width: 799px) {

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isProduction = process.env.NODE_ENV == "production";
@@ -6,7 +7,7 @@ const isProduction = process.env.NODE_ENV == "production";
 const config = {
     entry: "./src/index.js",
     externals: {
-        react: "React",
+        React: "react",
     },
     output: {
         path: path.resolve(__dirname, "./dist"),
@@ -22,6 +23,9 @@ const config = {
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
+        }),
+        new webpack.ProvidePlugin({
+            React: "react",
         }),
     ],
     module: {

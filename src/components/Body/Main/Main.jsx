@@ -31,7 +31,7 @@ export default function Main() {
 
     return (
         <main>
-            <Presentation />
+            {/* <Presentation /> */}
             <Demo isModileVersion={isModileVersion} data={demoPorduct} />
             <Demo
                 isModileVersion={isModileVersion}

@@ -1,3 +1,4 @@
+import React from "react";
 import cl from "./Header.module.css";
 import HeaderInfo from "./HeaderInfo/HeaderInfo";
 import NavBar from "./NavBar/NavBar";
@@ -9,7 +10,6 @@ export default function Header() {
         <header className={cl.header}>
             <Hat />
             <MiniNavBar />
-
             <HeaderInfo />
             <NavBar />
         </header>
