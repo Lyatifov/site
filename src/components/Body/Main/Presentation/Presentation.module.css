@@ -1,25 +1,12 @@
 .presentation {
-    /* background-image: url("../../../img/swiper/presentation.png"); */
-    /* height: 460px;
-    box-sizing: border-box;
-    padding: 5% 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-    text-align: left;
-    letter-spacing: -0.5px;
-    background-repeat: no-repeat;
-    background-position: center center; */
 }
-
 
 .presentation__presentationWrapper {
     max-width: 457px;
     width: auto;
 }
 
-.presentation__presentationWrapper>div {
+.presentation__presentationWrapper > div {
     margin: 15px 0;
 }
 
@@ -30,7 +17,6 @@
 .presentation__presentationText_700 {
     font-weight: 700;
 }
-
 
 .presentation__icon {
     background-color: white;
@@ -118,11 +104,11 @@
         flex-wrap: wrap;
     }
 
-    .presentation__dignityWrapper>div {
+    .presentation__dignityWrapper > div {
         margin-top: 10px;
     }
 
-    .presentation__presentationWrapper>div {
+    .presentation__presentationWrapper > div {
         margin: 10px 0;
     }
 
@@ -145,7 +131,7 @@
         justify-content: center;
     }
 
-    .presentation__icon>img {
+    .presentation__icon > img {
         width: 10px;
         height: 10px;
     }
@@ -160,7 +146,6 @@
     }
 
     .presentation__dignityTitle {
-
         width: 230px;
         height: 50px;
         font-size: 20px;

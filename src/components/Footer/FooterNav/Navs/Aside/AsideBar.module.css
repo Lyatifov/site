@@ -5,17 +5,17 @@
     box-sizing: border-box;
 }
 
-.aside>li {
+.aside > li {
     padding: 12px;
     width: 200px;
     height: 35px;
 }
 
 .aside_border {
-    border-top: 1px solid #E7E6E6;
+    border-top: 1px solid #e7e6e6;
 }
 
-.aside__link>a {
+.aside__link > a {
     color: #004583;
 }
 
@@ -28,7 +28,7 @@
         width: auto;
     }
 
-    .aside>li {
+    .aside > li {
         width: auto;
     }
 }

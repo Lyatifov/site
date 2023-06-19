@@ -1,4 +1,4 @@
-._body{
+._body {
     min-height: 500px;
     width: auto;
     display: flex;
@@ -8,17 +8,17 @@
 }
 
 @media (max-width: 799px) {
-    ._body{
+    ._body {
         min-height: 250px;
     }
 }
 
 @media (min-width: 800px) {
-    ._body{
+    ._body {
         min-height: 500px;
     }
 }
 
-._body>h1{
+._body > h1 {
     margin: auto;
 }

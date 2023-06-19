@@ -1,5 +1,4 @@
 .dignit {
-    
 }
 
 .dignit__imgWrapper {
@@ -24,7 +23,7 @@
     text-align: left;
 
     letter-spacing: -0.5px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     display: flex;
     flex-direction: column;
@@ -37,7 +36,7 @@
     width: 445px;
     height: auto;
     /* margin-left: 16%; */
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     font-weight: 700;
     font-size: 38px;
     line-height: 48px;
@@ -48,7 +47,7 @@
 .dignit__text2 {
     width: 457px;
     /* margin-left: 16%; */
-    font-family: 'Inter';
+    font-family: "Inter";
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
@@ -59,7 +58,7 @@
     font-weight: 500;
 }
 
-.dignit__text2>a {
+.dignit__text2 > a {
     color: white;
     font-weight: 400;
 }
@@ -81,10 +80,9 @@
     height: 50px;
     background: white;
     border-radius: 50%;
-    
 }
 
-.dignity__icon>img {
+.dignity__icon > img {
     width: 16px;
     height: 16px;
     margin: 16.5px;
@@ -103,7 +101,7 @@
 }
 
 .dignity_600 {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     font-style: normal;
     font-weight: 600;
     font-size: 21px;
@@ -125,17 +123,14 @@
     max-width: 350px;
 }
 
-
 @media (max-width: 799px) {
-
     .dignity {
         max-width: 380px;
     }
 
-    .dignit__data {    
+    .dignit__data {
         padding-left: 5%;
     }
-    
 
     .dignit__title {
         height: auto;
@@ -155,9 +150,7 @@
     }
 }
 
-
 @media (max-width: 600px) {
-
     /* .dignit__data {    
         padding-left: 5%;
     } */
@@ -189,7 +182,7 @@
         border-radius: 50%;
     }
 
-    .dignity__icon>img {
+    .dignity__icon > img {
         width: 16px;
         height: 16px;
         margin: 16.5px;
@@ -209,20 +202,16 @@
     }
 
     .dignity__textDignity {
-        
-
     }
 
     .dignity_200 {
         font-weight: 400;
         font-size: 10px;
         line-height: 15px;
-        
     }
 }
 
 @media (max-width: 450px) {
-
     /* .dignit__data {    
         padding-left: 5%;
     } */
@@ -253,7 +242,7 @@
         border-radius: 50%;
     }
 
-    .dignity__icon>img {
+    .dignity__icon > img {
         width: 10px;
         height: 10px;
         margin: 10px;
@@ -274,7 +263,6 @@
 
     .dignity__textDignity {
         width: 70%;
-
     }
 
     .dignity__text {

@@ -7,7 +7,7 @@
 .hat {
     box-sizing: border-box;
     position: relative;
-    border: 1px solid #F3F3F3;
+    border: 1px solid #f3f3f3;
     width: 100%;
     height: 62px;
     min-width: 300px;
@@ -24,23 +24,23 @@
     display: flex;
 }
 
-.hat__text>div {
+.hat__text > div {
     padding-left: 5px;
     margin: auto auto;
 }
 
-.hat__link>a {
+.hat__link > a {
     text-decoration-line: underline;
     color: #004583;
 }
 
-.hat__logo>img {
+.hat__logo > img {
     width: 93px;
     height: 46px;
     margin: 6px auto;
 }
 
-@media (min-width:800px) {
+@media (min-width: 800px) {
     .hat {
         visibility: hidden;
         pointer-events: none;
@@ -49,7 +49,7 @@
     }
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
     .hat__burgerButton {
         cursor: pointer;
     }

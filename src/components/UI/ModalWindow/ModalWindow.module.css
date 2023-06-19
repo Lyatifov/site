@@ -36,7 +36,6 @@
     cursor: pointer;
 }
 
-
 @media (max-width: 799px) {
     .__window_active {
         padding: 5px 20px;
@@ -48,11 +47,9 @@
     }
 }
 
-
 @media (min-width: 800px) {
     .__window_active {
         padding: 20px 40px;
-
     }
 
     ._closeButton {
@@ -64,7 +61,6 @@
 ._closeWrapper {
     position: relative;
 }
-
 
 ._icon {
     margin: auto;
@@ -85,7 +81,7 @@
     transform: translate(0, -2.5px) rotate(-45deg);
 }
 
-.__window_active>div {
+.__window_active > div {
     margin: 15px 0;
 }
 
@@ -95,14 +91,13 @@
     justify-content: space-around;
 }
 
-.__inputWrapper>* {
+.__inputWrapper > * {
     margin: 2px 0;
 }
 
-.__inputWrapper>button {
+.__inputWrapper > button {
     cursor: pointer;
 }
-
 
 .__input_invalid {
     border: 2px solid rgb(129, 6, 6);
@@ -124,7 +119,7 @@
     border-radius: 5px;
 }
 
-.__inputWrapper>button {
+.__inputWrapper > button {
     border: 1px solid rgb(15, 15, 20);
     background: #004583;
     color: rgb(213, 213, 236);

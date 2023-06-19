@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.BurgerButtonMenu>div {
+.BurgerButtonMenu > div {
     box-sizing: border-box;
     width: 28px;
     height: 5px;
@@ -14,20 +14,20 @@
     margin-top: 5px;
     margin-bottom: 2.5px;
     border-radius: 16px;
-    transition-duration: .25s;
+    transition-duration: 0.25s;
 }
 
-.BurgerButtonMenu_active>.BurgerButtonMenu__item1 {
-    transition-duration: .25s;
+.BurgerButtonMenu_active > .BurgerButtonMenu__item1 {
+    transition-duration: 0.25s;
     transform: translate(5px, 0) rotate(45deg) translate(3px, 11px);
 }
 
-.BurgerButtonMenu_active>.BurgerButtonMenu__item2 {
-    transition-duration: .25s;
+.BurgerButtonMenu_active > .BurgerButtonMenu__item2 {
+    transition-duration: 0.25s;
     opacity: 0;
 }
 
-.BurgerButtonMenu_active>.BurgerButtonMenu__item3 {
-    transition-duration: .25s;
+.BurgerButtonMenu_active > .BurgerButtonMenu__item3 {
+    transition-duration: 0.25s;
     transform: translate(5px, 0) rotate(-45deg) translate(3px, -11px);
 }

@@ -8,12 +8,12 @@
     padding: 15px 10%;
 }
 
-.header__link>a {
+.header__link > a {
     text-decoration-line: underline;
     color: #004583;
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
     .header {
         padding: 0;
         width: 0;
@@ -23,7 +23,7 @@
         opacity: 0;
     }
 
-    .header>* {
+    .header > * {
         padding: 0;
         width: 0;
         height: 0;
@@ -68,5 +68,5 @@
 }
 
 .header__textRed {
-    color: #BB2822;
+    color: #bb2822;
 }

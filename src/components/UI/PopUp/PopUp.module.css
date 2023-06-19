@@ -13,7 +13,6 @@
     display: flex;
     transition-duration: 1s;
     opacity: 0;
-    
 }
 
 .__popUp_active {

@@ -12,7 +12,7 @@
     right: 6%;
     bottom: 15%;
     z-index: 999;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     -webkit-animation: hoverWave linear 1s infinite;
     animation: hoverWave linear 1s infinite;
 }
@@ -39,7 +39,7 @@
     height: 75px;
     width: 75px;
     opacity: 1;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     animation: 1200ms ease 0s normal none 1 running shake;
     animation-iteration-count: infinite;
 }
@@ -60,8 +60,8 @@
     line-height: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    transition: .3s ease-in-out;
-    font-family: 'montserrat', Arial, Helvetica, sans-serif;
+    transition: 0.3s ease-in-out;
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
 }
 
 ._button ._text:hover span {
@@ -70,19 +70,24 @@
 
 @keyframes hoverWave {
     0% {
-        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2)
+        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+            0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
     }
 
     40% {
-        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2)
+        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+            0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
     }
 
     80% {
-        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067)
+        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+            0 0 0 30px rgba(56, 163, 253, 0),
+            0 0 0 26.7px rgba(56, 163, 253, 0.067);
     }
 
     100% {
-        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0.0)
+        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+            0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
     }
 }
 

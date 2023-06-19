@@ -1,26 +1,31 @@
-import cl from "./BurgerButtonMenu.module.css"
-import { useDispatch, useSelector } from 'react-redux'
-import { toggleIsActiveMiniMenu } from "../../../store/statesSlice"
-
+import cl from "./BurgerButtonMenu.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleIsActiveMiniMenu } from "../../../store/statesSlice";
 
 export default function BurgerButtonMenu({ className }) {
-
-    const dispatch = useDispatch()
-    const isActive = useSelector(state => state.states.isActiveMiniMenu)
+    const dispatch = useDispatch();
+    const isActive = useSelector((state) => state.states.isActiveMiniMenu);
 
     function Active() {
-        dispatch(toggleIsActiveMiniMenu())
+        dispatch(toggleIsActiveMiniMenu());
     }
 
     return (
-        <div className={isActive ?
-            cl.BurgerButtonMenu + ' ' + cl.BurgerButtonMenu_active + ' ' + className
-            : cl.BurgerButtonMenu + ' ' + className
-        }
-            onClick={() => Active()}>
+        <div
+            className={
+                isActive
+                    ? cl.BurgerButtonMenu +
+                      " " +
+                      cl.BurgerButtonMenu_active +
+                      " " +
+                      className
+                    : cl.BurgerButtonMenu + " " + className
+            }
+            onClick={() => Active()}
+        >
             <div className={cl.BurgerButtonMenu__item1}></div>
             <div className={cl.BurgerButtonMenu__item2}></div>
             <div className={cl.BurgerButtonMenu__item3}></div>
-        </div >
-    )
+        </div>
+    );
 }

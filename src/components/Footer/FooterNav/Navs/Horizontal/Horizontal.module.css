@@ -15,11 +15,11 @@
     width: auto;
 }
 
-.nav__column>a {
+.nav__column > a {
     color: #071828;
 }
 
-.nav__item >a {
+.nav__item > a {
     color: black;
 }
 

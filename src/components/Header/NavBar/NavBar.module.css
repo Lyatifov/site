@@ -1,7 +1,7 @@
 .nav {
     height: 54px;
-    border-top: 1px solid #EFEFEF;
-    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
     width: auto;
     display: flex;
     padding: 0 8%;
@@ -15,16 +15,16 @@
     width: 65%;
 }
 
-.nav__item >a {
+.nav__item > a {
     color: black;
 }
 
-.nav__item_redText>a {
-    color: #BB2822;
+.nav__item_redText > a {
+    color: #bb2822;
     font-weight: 700;
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
     .nav {
         visibility: hidden;
         pointer-events: none;
@@ -34,12 +34,11 @@
         border: 0;
     }
 
-    .nav>* {
+    .nav > * {
         width: 0;
         height: 0;
         border: 0;
     }
-
 }
 
 .nav__inputWrapper {
@@ -71,5 +70,5 @@
 
 .nav__input::placeholder {
     color: #004583;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }

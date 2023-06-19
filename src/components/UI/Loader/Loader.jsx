@@ -1,4 +1,4 @@
-import cl from "./Loader.module.css"
+import cl from "./Loader.module.css";
 
 export default function Loader() {
     return (
@@ -13,5 +13,5 @@ export default function Loader() {
                 <span>Loading</span>
             </div>
         </div>
-    )
+    );
 }

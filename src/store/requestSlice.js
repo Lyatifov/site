@@ -1,43 +1,37 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import axios from "axios"
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
-export const newRequest = createAsyncThunk(
-    "request/newRequest",
-    async function (data, { rejectWithValue, dispatch }) {
-
-        axios({
-            method: "POST",
-            url: `http://localhost:3002/api/callme`,
-            headers: {
-                "Content-Type": "application/json",
-                "charset": "utf-8"
-            },
-            data: data
+export const newRequest = createAsyncThunk("request/newRequest", async function(
+    data,
+    { rejectWithValue, dispatch }
+) {
+    axios({
+        method: "POST",
+        url: `http://localhost:3002/api/callme`,
+        headers: {
+            "Content-Type": "application/json",
+            charset: "utf-8",
+        },
+        data: data,
+    })
+        .then(function(response) {
+            if (response.status === 202) {
+                console.log("ОК");
+            }
         })
-
-            .then(function (response) {
-                if (response.status === 202) {
-                    console.log("ОК")
-                }
-            })
-            .catch(function (error) {
-                return rejectWithValue(error.message)
-            })
-    }
-
-)
+        .catch(function(error) {
+            return rejectWithValue(error.message);
+        });
+});
 
 const requestSlice = createSlice({
     name: "request",
-    initialState: {
-
-    },
+    initialState: {},
 
     reducers: {
         toggler(state, action) {
-            state.isActiveMiniMenu = !state.isActiveMiniMenu
+            state.isActiveMiniMenu = !state.isActiveMiniMenu;
         },
-
     },
 
     // extraReducers: {
@@ -50,10 +44,8 @@ const requestSlice = createSlice({
     //         state.error = action.payload
     //     }
     // }
-})
+});
 
 // const { toggler } = requestSlice.actions
 
-export default requestSlice.reducer
-
-
+export default requestSlice.reducer;

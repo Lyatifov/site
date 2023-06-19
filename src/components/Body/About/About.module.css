@@ -3,7 +3,7 @@
     height: 350px;
 }
 
-.about>div {
+.about > div {
     margin: 30px 0;
 }
 
@@ -26,7 +26,6 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
-
 }
 
 @media (min-width: 800px) {
